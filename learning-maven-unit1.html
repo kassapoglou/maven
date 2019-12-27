@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Μαθαίνω Apache Maven</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="maven_style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150900548-1');
+</script>
+
+</head>
+<body class="single-blog-post">
+    <div class="page-header">
+           <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
+                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                  <!--  <li><a href="#">Register</a></li> -->
+                                <!--    <li><a href="#">Login</a></li> -->
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                 </div>   <!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                           
+                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                               
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 1 Apache Maven - Setting up Maven </h1>
+
+                            <div class="entry-meta flex justify-content-center align-items-center">
+                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
+
+                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
+                            </div><!-- .entry-meta -->
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10">
+                <div class="featured-image">
+                  <!--  <img src="images/single-post.jpg" alt=""> -->
+
+                    <div class="posted-date position-absolute">
+                        <div class="day">27</div>
+                        <div class="month">Dec</div>
+                    </div><!-- .posted-date -->
+                </div><!-- .featured-image -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
+                <div class="post-share">
+                   
+
+                  
+                </div><!-- .post-share -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-12">
+                <div class="single-post-wrap">
+                    
+<p>Αυτή είναι η πρώτη από μια σειρά δωρεάν ενοτήτων στην τεχνολογία Apache Maven. 
+    Η γνώση και η εκπαίδευση στην λειτουργία του Apache Maven είναι απαραίτητη εάν και εφόσον θέλετε
+    γίνεται Java προγραμματιστές. Το Apache Maven είναι ένα ανοιχτού-κώδικα project που έχει ένα
+    δομημένο και απλό τρόπο να δημιουργεί, να διαχειρίζεται και να τεστάρει java projects.
+    Παρέχει όμως και άλλες δυνατότητες όπως εύκολη διαχείριση των βιβλιοθηκών στις οποίες 
+    στηρίζεται το project αλλά και εύκολη συμβατότητα και επικοινωνία με προϊόντα όπως 
+    Jenkins και Bamboo. Πριν όμως αναλύσουμε όλες τις δυνατότητες του και πως αυτές 
+    συνδυάζονται με την Java γλώσσα προγραμματισμού, θα πρέπει να το εγκαταστήσουμε
+    και να το ενσωματώσουμε με το αγαπημένο μας IDE (περιβάλλον ανάπτυξης Java εφαρμογών).
+    Ας δούμε λοιπόν τα βήματα που πρέπει να ακολουθήσουμε για να εγκαταστήσουμε επιτυχώς
+    το Apache Maven.</p>
+
+
+<p>Το Apache Maven είναι μια εφαρμογή που στηρίζεται στην Java για να 
+    λειτουργήσει σωστά. Οπότε σαν πρώτο βήμα θα πρέπει να εγκαταστήσουμε 
+    το Java Development Kit (JDK) και να το δηλώσουμε σωστά στο λειτουργικό
+    μας σύστημα. Αν κοιτάξουμε το web site της 
+    Oracle <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html"><font color="#0000CC">(https://www.oracle.com/technetwork/java/javase/downloads/index.html)</font> </a>,  
+    θα παρατηρήσουμε ότι αν και η τελευταία έκδοση της Java είναι η 13.0.1, η έκδοση
+    11.0.5 είναι εκείνη που θα υποστηρίζεται για αρκετό καιρό επειδή η Oracle την
+    έχει χαρακτηρίσει σαν LTS (Long-Term Support). Για αυτό ακριβώς το λόγο, θα 
+    προτιμήσουμε και εμείς να κατεβάσουμε και να εγκαταστήσουμε την έκδοση Java SE 11.0.5. 
+    Όλα τα παραδείγματα σε αυτή την ενότητα είναι σε Windows 10.</p>
+
+<img src="apache-maven-unit1/apache-maven-unit1-1.jpg" alt="" class="center"><p></p>
+                    
+<p>Μετά το πέρας της εγκατάστασης της Java SE 11.0.5. θα πρέπει να δηλώσουμε στα 
+    Windows 10 που έχει εγκατασταθεί η Java έτσι ώστε να μπορούμε να την καλέσουμε από
+    οποιοδήποτε directory μέσα από το command terminal. Για αυτόν το σκοπό, θα πρέπει να 
+    πάμε στα Environment Variables των Windows 10 και να δημιουργήσουμε μια καινούργια 
+    μεταβλητή με το όνομα <strong>JAVA_HOME</strong> η οποία θα έχει σαν Value το path στο οποίο
+    βρίσκεται η Java.</p>
+
+
+   <img src="apache-maven-unit1/apache-maven-unit1-2.jpg" alt="" class="center"><p></p>                 
+                    
+   <p>Τώρα θα πρέπει να δηλώσουμε στα Windows 10 την τοποθεσία που βρίσκεται
+       το εκτελέσιμο αρχείο της Java (java.exe).  Επιλέγουμε την System Variable 
+       <strong>Path</strong> και κάνουμε κλικ στο κουμπί <strong>Edit</strong>.</p>      
+                    
+    <img src="apache-maven-unit1/apache-maven-unit1-3.jpg" alt="" class="center"><p></p>       
+    
+    <p>Δηλώστε την μεταβλητή <strong>JAVA_HOME</strong> που έχετε ορίσει συν τον <strong>bin</strong>
+        φάκελλο μέσα στον οποίο βρίσκεται το εκτελέσιμο αρχείο της Java. Πατήστε <strong>ΟΚ</strong> να 
+        ολοκληρώσετε την διαδικασία.</p>
+    
+    <img src="apache-maven-unit1/apache-maven-unit1-4.jpg" alt="" class="center"><p></p>  
+    
+    <p>Αν ανοίξουμε ένα cmd terminal στα Windows 10 και γράψουμε <strong>java -version </strong>θα πρέπει
+        να λάβουμε το ακόλουθο αποτέλεσμα:</p>
+    
+     <img src="apache-maven-unit1/apache-maven-unit1-5.jpg" alt="" class="center"><p></p> 
+     
+     <p>Σαν δεύτερο βήμα τώρα, θα πρέπει να κατεβάσουμε και να αποσυμπιέσουμε το
+         Apache Maven. Από το web site της 
+         Apache <a href="https://maven.apache.org/download.cgi"><font color="#0000CC">(https://maven.apache.org/download.cgi)</font> </a>
+         κατεβάζουμε την τελευταία έκδοση του Maven η οποία είναι η 3.6.3.</p>
+     
+     <img src="apache-maven-unit1/apache-maven-unit1-6.jpg" alt="" class="center"><p></p> 
+     
+     <p>Αφού κατεβάσουμε το αρχείο, το κάνουμε unzip μέσα στο folder
+         ή directory που επιθυμούμε. Για να μπορέσουμε όμως να καλέσουμε το Maven 
+         σε ένα cmd terminal από οποιοδήποτε path και αν βρισκόμαστε, θα πρέπει να το
+         δηλώσουμε και αυτό (όπως κάναμε και με την Java) στα System Variables των Windows 10.
+         Δηλώνουμε λοιπόν μια καινούργια μεταβλητή με το όνομα <strong>M2_HOME</strong> η οποία θα έχει
+         σαν τιμή το path στο οποίο βρίσκεται το unzip αρχείο του Maven.</p>
+     
+      <img src="apache-maven-unit1/apache-maven-unit1-7.jpg" alt="" class="center"><p></p> 
+      
+      <p>Τώρα θα πρέπει να δηλώσουμε στα Windows 10 που βρίσκεται το εκτελέσιμο αρχείο 
+          του Maven. Οπότε επιλέγουμε πάλι την μεταβλητή<strong> Path</strong>, πατάμε <strong>Edit</strong> και προσθέτουμε
+          την <strong>M2_HOME</strong> μεταβλητή μαζί με τον bin φάκελο του Maven.
+          Πατήστε<strong> ΟΚ</strong> όταν τελειώσετε την διαδικασία.</p>
+      
+      <img src="apache-maven-unit1/apache-maven-unit1-8.jpg" alt="" class="center"><p></p> 
+      
+      <p>Αν λοιπόν ανοίξουμε ένα cmd terminal και εκτελέσουμε την εντολή <strong>mvn -v</strong> θα πρέπει
+          να πάρουμε πίσω το εξής αποτέλεσμα:</p>
+
+       <img src="apache-maven-unit1/apache-maven-unit1-9.jpg" alt="" class="center"><p></p> 
+       
+       <p>Μέχρι αυτό το σημείο έχουμε εγκαταστήσει όλα τα εργαλεία
+           που χρειάζονται για να δημιουργήσουμε java projects με το 
+           Apache Maven. Επειδή όμως όλα τα μοντέρνα εργαλεία έχουν την
+           ικανότητα ενσωμάτωσης του Apache Maven στο περιβάλλον τους, ας
+           προχωρήσουμε και σε αυτό το βήμα για να ολοκληρώσουμε την εργαλειοθήκη 
+           μας και να έχουμε ένα ολοκληρωμένο περιβάλλον ανάπτυξης εφαρμογών Java 
+           χρησιμοποιώντας Maven.</p>
+       
+       <p>Στα δικά μας δωρεάν μαθήματα Apache Maven θα χρησιμοποιήσουμε 
+           το Community Edition (δωρεάν) του IntelliJ IDEA που μπορείτε 
+           να κατεβάσετε από εδώ:
+          <a href="https://www.jetbrains.com/idea/download/#section=windows"><font color="#0000CC">(https://www.jetbrains.com/idea/download/#section=windows)</font> </a>  . </p>
+       
+       <img src="apache-maven-unit1/apache-maven-unit1-10.jpg" alt="" class="center"><p></p> 
+       
+       <p>Αφού το εγκαταστήσετε, ξεκινήστε το για να πάμε στις επιλογές του. 
+           Ίσως χρειαστεί να δημιουργήσετε ένα πρόχειρο Java project για 
+           να σας αφήσει να προχωρήσετε. Δημιουργείστε ένα java project δίνοντας 
+           ότι όνομα θέλετε. Όταν το περιβάλλον του IntelliJ είναι έτοιμο,
+           πηγαίνουμε<strong> File → Settings → Build, Execution, Deployment → Build Tools → Maven </strong>και
+           αλλάζουμε το Maven Home Directory σε αυτό που έχουμε ήδη εγκαταστήσει.
+           Δεν χρειάζεται να το ξαναγράψετε, θα είναι έτοιμη η επιλογή για να την επιλέξετε.</p>
+       
+        <img src="apache-maven-unit1/apache-maven-unit1-11.jpg" alt="" class="center"><p></p> 
+        
+        <p>Πατήστε<strong> Apply</strong> και μετά <strong>ΟΚ</strong> για να ολοκληρώσετε την διαδικασία.</p>
+        
+        <p>Το περιβάλλον μας είναι έτοιμο τώρα. Από την επόμενη ενότητα 
+            θα αρχίζουμε να αναλύουμε όλες τις επιλογές που έχουμε
+            για την δημιουργία ενός java project και πως μπορούμε 
+            να προσθέτουμε third party libraries που δεν βρίσκονται
+            στην εγκατάσταση της java αλλά χρειάζονται για την σωστή
+            λειτουργία του κώδικα μας.</p>
+        
+        
+      
+                  
+                <div class="author-box">
+                    <div class="author-info flex flex-wrap">
+                        <div class="author-avatar">
+                            <img src="images/michail.jpg" alt="">
+
+                           
+                        </div><!-- .author-avatar -->
+
+                        <div class="author-details">
+                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
+
+                            <div class="entry-content mt-3">
+                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
+                                  τρόπο να χρησιμοποιείτε το Apache Maven για την δημιουργία όλων των Java και Java EE project σας. Ασχολούμαι με την τεχνική εκπαίδευση 
+                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
+                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
+                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
+                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
+                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
+                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
+                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
+                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .author-details -->
+                    </div><!-- .author-info -->
+                </div><!-- .author-box -->
+
+                
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+ 
+
+  
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
