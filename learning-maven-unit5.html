@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Μαθαίνω Apache Maven</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="maven_style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150900548-1');
+</script>
+
+</head>
+<body class="single-blog-post">
+    <div class="page-header">
+           <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
+                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                  <!--  <li><a href="#">Register</a></li> -->
+                                <!--    <li><a href="#">Login</a></li> -->
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                 </div>   <!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                           
+                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                               
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 5 Apache Maven - Apache Maven LifeCycle (Part 2)</h1>
+
+                            <div class="entry-meta flex justify-content-center align-items-center">
+                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
+
+                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
+                            </div><!-- .entry-meta -->
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10">
+                <div class="featured-image">
+                  <!--  <img src="images/single-post.jpg" alt=""> -->
+
+                    <div class="posted-date position-absolute">
+                        <div class="day">17</div>
+                        <div class="month">Jan</div>
+                    </div><!-- .posted-date -->
+                </div><!-- .featured-image -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
+                <div class="post-share">
+                   
+
+                  
+                </div><!-- .post-share -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-12">
+                <div class="single-post-wrap">
+
+
+<p>Στην προηγούμενη ενότητα είδαμε το clean Lifecycle και όλα τα phases 
+    όπως και τα goals από τα οποία αποτελείται το συγκεκριμένο phase. 
+    Σε αυτή την δωρεάν ενότητα Apache Maven, θα δούμε το <strong>default 
+    Lifecycle </strong> όπως επίσης και πως μπορούμε να κάνουμε build ένα
+    Java Maven project είτε επειδή το έχουμε δημιουργήσει για πρώτη φορά, είτε γιατί
+    αλλάξαμε κάποιες γραμμές κώδικα και πρέπει να το δημιουργήσουμε ξανά.</p>
+
+<p>Με το clean lifecycle αυτό που θέλαμε να πετύχουμε είναι να καθαρίσουμε 
+    το project μας από προηγούμενα builds έτσι ώστε να το χτίσουμε πάλι 
+    από την αρχή, ίσως γιατί προσθέσαμε ή γενικότερα αλλάξαμε κάποια σημεία
+     του κώδικα. Αυτό το επιβεβαιώσαμε όταν εκτελώντας το clean είδαμε ότι
+      εξαφανίστηκε o target φάκελλος και όλα τα στοιχεία που είχαν δημιουργηθεί 
+      όταν είχαμε τρέξει για πρώτη φορά την εντολή install.</p>
+
+<p>Αφού λοιπόν καθαρίσουμε τα παλαιότερα αρχεία, θέλουμε τώρα για να 
+    δημιουργήσουμε το project από την αρχή αφού περιέχει τα καινούργια 
+    στοιχεία που έχουμε προσθέσει στον κώδικα. Για αυτό το σκοπό, θα πρέπει
+     να χρησιμοποιήσουμε το <strong>default Lifecycle</strong> και πιο συγκεκριμένα θα πρέπει 
+     να καλέσουμε το <strong>install phase</strong>. Πριν προχωρήσουμε, ας δούμε πάλι τα 23
+      phases από τα οποία αποτελείται το default Lifecycle.</p>
+
+      <img src="apache-maven-unit5/apache-maven-unit5-1.jpg" alt="apache-maven" class="center"><p></p>
+<p>Παρατηρώντας την λίστα, θα δούμε ότι το <strong>phase install</strong>, το 
+    οποίο και δημιουργεί το τελικό jar αρχείο του project, βρίσκεται στην προτελευταία θέση. 
+    Αυτό σημαίνει ότι όταν τρέχουμε την εντολή <strong>mvn install</strong>, 
+    αυτό θα βρει το phase install,  θα ψάξει να βρει ποιο plugin είναι συνδεδεμένο 
+    με αυτό το phase και από το plugin θα τρέξει το goal install. Μπορούμε 
+    να δούμε το goal install από την λίστα των plugins στο IntelliJ. </p>
+
+    <img src="apache-maven-unit5/apache-maven-unit5-2.JPG" alt="apache-maven" class="center"><p></p>
+
+<p>Η σειρά των phases όπως εμφανίζονται στην λίστα του default Lifecycle είναι
+     σημαντική, γιατί όποτε τρέχουμε μια εντολή θα τρέξουν όλες οι εντολές από την
+      αρχή της λίστας μέχρι και την εντολή την οποία εκτελέσαμε. Οπότε, όταν
+       τρέξαμε την<strong> mvn install </strong>εντολή, εκτελέστηκαν όλες τα πιο πάνω 
+       phases (και κατά συνέπεια goals) με την σειρά μέχρι και την install για να 
+       δημιουργηθεί το project μας.</p>
+
+<p>Αν και δεν έχουμε τελειώσει ακόμα με το default Lifecycle, αφού
+     είναι και το πιο σημαντικό από όλα τα υπόλοιπα Lifecycle, ας ολοκληρώσουμε
+      την κουβέντα μας με μια αναφορά και στο <strong>site Lifecycle</strong> και μετά θα ξαναγυρίσουμε
+       στο default για να μιλήσουμε για την δημιουργία του project με
+        περισσότερες λεπτομέρειες.</p>
+
+<p>Το site Lifecycle ορίζεται μόνο από τέσσερα phases:</p>
+
+<img src="apache-maven-unit5/apache-maven-unit5-3.JPG" alt="apache-maven" class="center"><p></p>
+
+<p> Γενικότερα, το site Lifecycle δεν έχει καμία αξία χωρίς την ύπαρξη του Maven 
+    site plugin. Το site plugin χρησιμοποιείται για να δημιουργήσει ένα HTML αρχείο 
+    που περιέχει στοιχεία του project και κάποια reports σε σχέση με την δημιουργία
+     του project.</p>
+
+<p>Το site plugin ορίζει οκτώ goals αλλά δύο μόνο είναι άμεσα συνδεδεμένα με τα
+     phases του site Lifecycle. Αυτό μπορούμε να το επιβεβαιώσουμε τρέχοντας την εντολή </p>
+
+<p><strong>mvn help:describe -Dcmd=site</strong></p>
+
+<img src="apache-maven-unit5/apache-maven-unit5-4.JPG" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit5/apache-maven-unit5-5.JPG" alt="apache-maven" class="center"><p></p>
+
+<p>Όπως παρατηρούμε από το αποτέλεσμα εκτέλεσης της εντολής, το site goal του 
+    site plugin συνδέεται με το site phase, ενώ το deploy goal του site
+     plugin συνδέεται με το site-deploy phase.</p>
+
+<p>Αυτό που έχουμε δει μέχρι τώρα, είναι μια λίστα από plugins τα 
+    οποία προσφέρονται από το Maven. Τα plugins αυτά περιέχουν goals 
+    τα οποία έχουν συνδεθεί με κάποια phases. Οπότε η επόμενη ερώτηση 
+    είναι ποιος είναι ο ρόλος του Lifecycle στο IntelliJ?</p>
+
+    <img src="apache-maven-unit5/apache-maven-unit5-6.JPG" alt="apache-maven" class="center"><p></p>
+
+<p>Για να απαντήσουμε αυτή την ερώτηση, θα πρέπει πρώτα να μιλήσουμε για το τι είδος
+    project προσπαθούμε να δημιουργήσουμε. Γενικότερα στην Java μπορούμε να 
+    δημιουργήσουμε δύο ειδών αρχεία – τα <strong>jars</strong> και τα <strong>wars</strong>. Τα jars είναι για 
+    standard edition java εφαρμογές και για microservices που περιέχουν ενσωματωμένους
+     application servers (πχ. Spring Boot) και τα war αρχεία που είναι η καθαρή
+      μορφή μιας Java Web εφαρμογής. Στο δικό μας project δεν έχουμε ορίσει το 
+      τι είδος project package θέλουμε να δημιουργήσουμε οπότε το Maven, και
+       κατά συνέπεια το IntelliJ, θεωρεί ότι θέλουμε να δημιουργήσουμε ένα project
+        σε jar μορφή. Το Lifecycle που εμφανίζεται είναι το προτεινόμενο από το 
+        Maven για την δημιουργία ενός jar project. Αυτό που κάνει είναι να συνδυάζει
+         phases από όλα τα Maven Lifecycles και να δημιουργεί ένα καινούργιο ειδικά
+          για την δημιουργία jar projects. Κάθε phase σχετίζεται και με ένα plug in
+           και φυσικά με τα αντίστοιχα goals τα οποία το plugin περιέχει. Σχεδόν
+            όλα τα phases προέρχονται από το default Lifecycle. Επειδή όμως εξετάσαμε 
+            το clean και το site Lifecycle ας δούμε και το default.</p>
+
+<p>Τρέχουμε λοιπόν την εντολή</p>
+<p><strong>mvn help:describe -Dcmd=deploy</strong></p>
+
+<img src="apache-maven-unit5/apache-maven-unit5-7.JPG" alt="apache-maven" class="center"><p></p>
+
+<p>Όπως παρατηρούμε, χωρίς εμείς να το έχουμε ορίσει, το είδος του αρχείου 
+    που θα δημιουργηθεί θα είναι jar. Είναι όμως συνετό, να ορίζουμε κάποιες
+     παραμέτρους στο POM ασχέτως αν είναι προκαθορισμένα από το σύστημα ή όχι.
+      Έτσι θα έχουμε καλύτερο έλεγχο του project. Ας προσθέσουμε λοιπόν επίσημα 
+      την επιλογή αυτή στο POM γράφοντας</p>
+<pre class="prettyprint"><xmp>
+<packaging>jar</packaging>
+</xmp></pre>
+
+<p>Το POM τώρα θα πρέπει να έχει την εξής μορφή:</p>
+
+<p><strong>pom.xml</strong></p>
+<pre class="prettyprint"><xmp>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <project xmlns="http://maven.apache.org/POM/4.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+    
+        <groupId>com.mycompany</groupId>
+        <artifactId>HelloMaven</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    
+        <properties>
+            <maven.compiler.target>11</maven.compiler.target>
+            <maven.compiler.source>11</maven.compiler.source>
+        </properties>
+    
+        <packaging>jar</packaging>
+    </project>
+</xmp></pre>
+
+<p>Η περιγραφή του κάθε ενός phase που είναι συσχετισμένο με κάποιο
+     plugin μπορεί να βρεθεί στο site του Apache Maven ή μπορείτε να διαβάσετε
+      μια γρήγορη περιγραφή στον πίνακα που έχουμε δείξει πιο πάνω. Απλά θέλω 
+      να τονίσω το γεγονός ότι το deploy phase δεν σημαίνει ότι κάνω deploy μια 
+      εφαρμογή σε έναν application server αλλά ότι κάνω deploy το δημιουργημένο
+       jar αρχείο σε ένα remote repository εκτός του υπολογιστή μας.</p>
+
+<p>Τώρα, νομίζω, θα έχετε καταλάβει γιατί τρέξαμε την εντολή install όταν είχαμε
+     δημιουργήσει το project. Βασικά, εκτελέσαμε το phase install, το οποίο πριν 
+     εκτελεστεί θα τρέξουν όλα τα προηγούμενα phases τα οποία περιέχουν συγκεκριμένα
+      goals. Τώρα η ερώτηση είναι, εσείς θα πρέπει να κάνετε κλικ επάνω στην 
+      επιλογή install του Lifecycle πλαισίου, ή να γράψετε την εντολή (ή εντολές)
+       στο Execute Maven Goal? Το εύκολο θα είναι να επιλέξετε την επιλογή που σας
+        δίνεται στο Lifecycle, όπως έχουμε τρέξει ήδη. Αν θέλετε όμως να περάσετε 
+        κάποια έξτρα παράμετρο στην εντολή τότε θα χρειαστεί να γράψετε την εντολή.
+         Η γνώμη μου είναι να εκτελείτε όλες τις εντολές μέσα από το Execute Maven
+          Goal το οποίο, επειδή γνωρίζει ήδη το LifeCycle και τα plugins, θα σας
+           βοηθήσει καθώς γράφετε τις εντολές σας. </p>
+
+<p>Ποια είναι η πιο συνηθισμένη εντολή που θα τρέχετε σαν προγραμματιστές? Η απάντηση είναι:</p>
+<p><strong>mvn clean install</strong></p>
+
+<p>Αυτή η εντολή (βασικά είναι δύο εντολές), κάθε φορά που την εκτελείτε,
+     θα καθαρίζει το προηγούμενο jar, τρέχοντας όλα τα phases από το
+      clean Lifecycle και μετά θα τρέξει όλα τα phases από το default 
+      Lifecycle μέχρι και την install phase δημιουργώντας το τελικό jar του project.</p>
+
+<p>Αν θέλουμε να ανακεφαλαιώσουμε, από την πρακτική πλευρά, τι έχουμε μάθει
+     για το Maven μέχρι τώρα, θα λέγαμε ότι γνωρίζουμε το πως να δημιουργήσουμε
+      ένα Java Maven Project μέσα από το IntelliJ, πως να προσθέσουμε το properties
+       για να τρέξει το build process σωστά με την Java 11, πως να καθαρίζουμε και
+        πως να δημιουργούμε καινούργιο jar και τέλος πως να εκτελούμε το project
+         μέσα από το IntelliJ. Τέλεια, μέχρι αυτό το σημείο, αν το project σας 
+         δεν χρειάζεται καμία εξωτερική βιβλιοθήκη, όπως πχ Hibernate, τότε μπορείτε
+          να δημιουργήσετε προγράμματα Java, να γράψετε κώδικα και να τα εκτελέσετε.</p>
+
+<p>Στην επόμενη ενότητα θα κλείσουμε την αναφορά μας στο Apache Maven Lifecycle.</p>
+
+<!-- ---------------------------------------------------------------------------------------- -->
+      
+                  
+                <div class="author-box">
+                    <div class="author-info flex flex-wrap">
+                        <div class="author-avatar">
+                            <img src="images/michail.jpg" alt="">
+
+                           
+                        </div><!-- .author-avatar -->
+
+                        <div class="author-details">
+                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
+
+                            <div class="entry-content mt-3">
+                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
+                                  τρόπο να χρησιμοποιείτε το Apache Maven για την δημιουργία όλων των Java και Java EE project σας. Ασχολούμαι με την τεχνική εκπαίδευση 
+                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
+                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
+                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
+                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
+                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
+                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
+                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
+                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .author-details -->
+                    </div><!-- .author-info -->
+                </div><!-- .author-box -->
+
+                
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+ 
+
+  
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
