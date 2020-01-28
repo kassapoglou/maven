@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Μαθαίνω Apache Maven</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων για το Apache Maven"> 
+    <meta name="robots" content="index, follow"> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="maven_style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150900548-1');
+</script>
+
+</head>
+<body class="single-blog-post">
+    <div class="page-header">
+           <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
+                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                  <!--  <li><a href="#">Register</a></li> -->
+                                <!--    <li><a href="#">Login</a></li> -->
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                 </div>   <!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                           
+                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                               
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 7 Apache Maven - Dependency Management (Part 1)</h1>
+
+                            <div class="entry-meta flex justify-content-center align-items-center">
+                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
+
+                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
+                            </div><!-- .entry-meta -->
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10">
+                <div class="featured-image">
+                  <!--  <img src="images/single-post.jpg" alt=""> -->
+
+                    <div class="posted-date position-absolute">
+                        <div class="day">28</div>
+                        <div class="month">Jan</div>
+                    </div><!-- .posted-date -->
+                </div><!-- .featured-image -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
+                <div class="post-share">
+                   
+
+                  
+                </div><!-- .post-share -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-12">
+                <div class="single-post-wrap">
+
+<p><h3>ΔΩΡΕΑΝ ΜΑΘΗΜΑΤΑ APACHE MAVEN</h3></p> 
+
+<p>Στην σημερινή δωρεάν ενότητα Apache Maven, θα δούμε πως μπορούμε να προσθέσουμε 
+    καινούργιες βιβλιοθήκες στο project μας (ονομάζεται dependency management) 
+    και πως αυτή η διαδικασία συνδέεται με όλα όσα έχουμε αναφέρει μέχρι τώρα
+     στις προηγούμενες ενότητες.</p>
+
+<p>Κάθε Java Project που θα δημιουργήσετε, αργά ή γρήγορα θα χρειαστεί κάποιες 
+    εξωτερικές βιβλιοθήκες για να λειτουργήσει σωστά. Για παράδειγμα, ίσως χρειαστεί 
+    το jar της MySQL ή της PostgreSQL για να το χρησιμοποιήσει σαν driver για να ενωθεί 
+    στην βάση και να διαβάσει ή να γράψει δεδομένα. Πως προσθέτουμε ένα καινούργιο jar 
+    στο POM έτσι ώστε να μπορέσει το Maven να το κατεβάσει και να το ενσωματώσει στο project μας? 
+    Τώρα που γνωρίζεται περισσότερες λεπτομέρειες για το πως δημιουργούμε, χτίζουμε και εκτελούμε
+     ένα Java Maven Project μπορούμε να προσθέσουμε κάποιες έξτρα πληροφορίες για την λειτουργία του POM.</p>
+
+<p> Όπως ήδη έχουμε αναφέρει, το POM (Project Object Model) είναι η ταυτότητα 
+    του κάθε Maven project γιατί μέσα στο xml αρχείο του ορίζονται όλα τα απαραίτητα
+     στοιχεία που χαρακτηρίζουν το project. Με απλά λόγια, χωρίς POM δεν μπορεί να υπάρξει
+      project. Όμως, μέχρι τώρα, έχουμε δει μόνο ένα πολύ μικρό αριθμό των δυνατοτήτων και
+       χρήσης του POM. Γενικότερα, το POM μπορεί να περιέχει στοιχεία που να προσδιορίζουν
+        τις εξής ιδιότητες του project:</p>
+
+<ul>
+    <li><strong>Project information</strong> – Αυτά είναι στοιχεία του POM που μας
+         προσφέρουν πληροφορίες για το project όπως το όνομα του project, τον οργανισμό,
+          την ομάδα των προγραμματιστών που δημιούργησαν το project, κτλ.</li>
+    <li><strong>POM relationships</strong> - Σε μεγάλα project συνήθως διαιρούμε τα actions 
+        του project σε μικρότερα modules. Στο POM μπορούμε να αναφέρουμε τα modules από 
+        τα οποία εξαρτάται το project μας όπως και κληρονομικότητες από άλλα POMs.</li>
+    <li><strong>Build settings</strong> – Μπορούμε να ορίσουμε εμείς την τοποθεσία των
+         φακέλων τους οποίους χρησιμοποιεί το Apache Maven για σκοπούς όπως να διαβάσει
+          αρχεία που περιέχουν test files ή source code αλλά και για να γράψει το 
+          αποτέλεσμα ενός report.</li>
+    <li><strong>Build environment</strong>  – Μέσα στο POM αρχείο μπορούμε να ορίσουμε διάφορα
+         profiles ανάλογα με το αν δημιουργούμε ένα project για development, testing
+          ή production περιβάλλον. </li>
+</ul>
+
+<p>Στο απλό project το οποίο έχουμε δημιουργήσει, είχαμε δηλώσει 
+    στο<strong> pom.xml</strong> το <strong>groupId</strong>, <strong>artifactId</strong>, και <strong>version</strong>
+     του project μας. </p>
+
+     <img src="apache-maven-unit7/apache-maven-unit7-1.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Αυτά τα τρία στοιχεία μαζί ονομάζονται <strong>coordinates</strong>. Τα Maven coordinates είναι
+     ένα σετ από μοναδικά στοιχεία που βοηθάνε το Apache Maven να ξεχωρίζει με
+      επιτυχία ένα project, ένα dependency ή ένα plugin. Τα συγκεκριμένα στοιχεία,
+       που είναι και τα μοναδικά στο project μας μέχρι τώρα, ορίζουν την μοναδικότητα 
+       του project όταν αυτό αποθηκευτεί στο local repository μετά την εκτέλεση της
+        εντολής install. Το που βρίσκεται αυτό το local repository και που αποθηκεύεται
+         το project το δείξαμε σε προηγούμενες ενότητες. Τα maven coordinates όμως, 
+         δηλαδή το groupId, artifactId και version, θα τα χρειαστούμε για να δηλώσουμε
+          εξωτερικές βιβλιοθήκες. Χρειάζονται και τα τρία στοιχεία έτσι ώστε να ξέρει
+           ακριβώς το Maven ποια έκδοση και ποια βιβλιοθήκη θα χρειαστεί να κατεβάσει
+            αποφεύγοντας οποιαδήποτε σύγχυση ή λάθος αν πολλαπλές εξωτερικές βιβλιοθήκες
+             χρειάζονται για το project.</p>
+
+
+<p>To <strong>modelVersion</strong> που υποστηρίζει το Maven είναι το 4.0.0. Το maven, 
+    για να είναι σίγουρο ότι είναι σωστά δομημένο και τα στοιχεία του γράφονται
+     στην σωστή σειρά, εφαρμόζει στο POM κανόνες με την μορφή του <strong>maven-4.0.0.xsd</strong> αρχείου. 
+     Μάλιστα αν πατήσετε Ctrl και μετά κάνετε κλικ επάνω στο link του xsd αρχείου, 
+     θα μπορείτε να δείτε το περιεχόμενο του. Δεν θα χρειαστεί να το αλλάξετε αυτό 
+     ποτέ εσείς. Απλά εξηγούμε όλα τα στοιχεία που υπάρχουν στο POM αρχείο και πρέπει 
+     να καταλάβουμε το πως είναι δομημένο έτσι ώστε να δηλώσουμε σωστά το
+      dependency που χρειαζόμαστε.</p>
+
+      <img src="apache-maven-unit7/apache-maven-unit7-2.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+      <img src="apache-maven-unit7/apache-maven-unit7-3.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Με όλη την θεωρία που γνωρίζουμε μέχρι τώρα θα μπορούσαμε να αντιπροσωπεύσουμε 
+    την λειτουργία του Apache Maven με την εξής εικόνα:</p>
+
+    <img src="apache-maven-unit7/apache-maven-unit7-4.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Κάθε Maven project λοιπόν περιέχει ένα POM αρχείο, που ορίζει κάθε πτυχή του project.
+     Το Maven χρησιμοποιεί το POM για να αποφασίσει για τις ενέργειες που θα εκτελέσει 
+     και τα αρχεία που θα δημιουργήσει. Τα dependencies, που είναι οι βιβλιοθήκες που
+      χρειάζεται, αρχικά τις ψάχνει στο local repository και μετά στο central.
+       Είναι πιθανόν να έχει οριστεί και κάποιο remote repository
+        (ίσως κάποιος server μέσα στην εταιρεία) τον οποίο θα ψάξει
+         να βρει. Για τα repositories θα μιλήσουμε σε μελλοντική ενότητα.
+          Για τώρα, ας δούμε πως μπορούμε στο project μας να προσθέσουμε 
+          ένα καινούργιο dependency.</p>
+
+<p>Ας υποθέσουμε, ότι θέλουμε να προσθέσουμε το jar με το όνομα Commons Lang από την Apache 
+    <a href="https://commons.apache.org/proper/commons-lang/"><font color="#0000CC">(https://commons.apache.org/proper/commons-lang/)</font> </a>. 
+    Το συγκεκριμένο jar περιέχει java μεθόδους που μας δίνουν 
+    έξτρα δυνατότητες όπως να διαχειριστούμε καλύτερα ένα String, 
+    να κάνουμε υπολογισμούς, ή ακόμα να ορίσουμε ημερομηνίες με καλύτερο 
+    τρόπο από αυτό που μας προσφέρει η εγκατάσταση της Java. Αυτό το jar όμως 
+    δεν υπάρχει στο local repository του υπολογιστή μας οπότε το Maven πρέπει
+     να ψάξει στο απομακρυσμένο repository του Maven για να το βρει και να το κατεβάσει.</p>
+
+<p>Επειδή έχουμε δημιουργήσει ένα Java Maven Project θα πρέπει να βρούμε
+     ποια είναι τα coordinates για να τα προσθέσουμε στο POM αρχείο του project μας.
+      Αν πάμε λοιπόν στο MVNRepository 
+      <a href="https://mvnrepository.com/artifact/org.apache.commons/commons-lang3/3.9 "><font color="#0000CC">(https://mvnrepository.com/artifact/org.apache.commons/commons-lang3/3.9 )</font> </a> 
+      και κάνουμε αναζήτηση για το Commons Lang θα πάρουμε αυτό που 
+      ψάχνουμε: το groupId, το artifactId και το version.</p>
+
+      <img src="apache-maven-unit7/apache-maven-unit7-5.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Για να μπορέσει το POM να αναγνωρίσει τα dependencies θα πρέπει να δημιουργήσουμε
+     μια καινούργια ενότητα που θα ξεκινάει και θα κλείνει με το tag dependencies.
+      Μέσα στην ενότητα dependencies ορίζουμε κάθε ένα dependency ξεχωριστά. Στην
+       ουσία αντιγράφουμε όλο το κείμενο που είναι γραμμένο μέσα στο πλαίσιο όπως μας 
+       το δίνει το MVNRepository. To POM αρχείο τώρα πρέπει να έχει την εξής μορφή:</p>
+
+       <p><strong>pom.xml</strong></p>
+       <pre class="prettyprint"><xmp>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <project xmlns="http://maven.apache.org/POM/4.0.0"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+            <modelVersion>4.0.0</modelVersion>
+        
+            <groupId>com.mycompany</groupId>
+            <artifactId>HelloMaven</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        
+            <properties>
+                <maven.compiler.target>11</maven.compiler.target>
+                <maven.compiler.source>11</maven.compiler.source>
+            </properties>
+        
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>3.9</version>
+                </dependency>
+        
+            </dependencies>
+        </project>
+       </xmp></pre>
+
+<p>Για ανανεώσουμε το project μας θα πρέπει να τρέξουμε την γνωστή εντολή <strong>mvn clean install</strong>
+     η οποία θα καθαρίσει το προηγούμενο jar από το local repository, 
+     θα κατεβάσει το common-lang3 jar, θα το συμπεριλάβει στο project
+      και θα to χτίσει ξανά.</p>
+
+<p>Αν προσέξουμε τώρα στις External Libraries του project, θα δούμε ότι υπάρχει μια
+     επιπλέον βιβλιοθήκη εκτός από την Java 11.</p>
+
+     <img src="apache-maven-unit7/apache-maven-unit7-6.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Ας αλλάξουμε τον κώδικα μας τώρα, έτσι ώστε να καλέσουμε την
+     βιβλιοθήκη που κατεβάσαμε και να δούμε την χρησιμότητα της. </p>
+
+     <img src="apache-maven-unit7/apache-maven-unit7-7.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+     <p>Τρέχουμε πάλι την εντολή <strong>mvn clean install</strong> και μετά την Run από το κύριο μενού.</p>
+
+     <img src="apache-maven-unit7/apache-maven-unit7-8.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Το αποτέλεσμα είναι να μας εμφανίσει το όνομα με το πρώτο γράμμα κεφαλαίο.
+     Φυσικά το jar περιέχει πολλές χρήσιμες μεθόδους, αλλά εμείς χρησιμοποιήσαμε
+      το πιο απλό παράδειγμα για να συγκεντρωθούμε περισσότερο στην διαδικασία
+       πρόσθεσης ενός dependency στο project μας παρά στο να γράψουμε ένα πιο
+        ενδιαφέρον java πρόγραμμα.</p>
+
+<p>Πριν κλείσουμε την ενότητα, θα ήθελα να αναφερθούμε σε δύο σημεία όσον αφορά 
+    το IntelliJ. Το πρώτο είναι η αποφυγή της επιλογής <strong>Build</strong> από το κύριο μενού. 
+    Το Build χτίζει το project με βάση τα στάνταρντ του IntelliJ.
+    Είναι προτιμότερο να εκτελούμε τις Maven εντολές όπως τις έχουμε μάθει
+     έτσι ώστε να είμαστε σίγουροι ότι το project μας χτίζεται σωστά. Το δεύτερο 
+     σημείο είναι η ενεργοποίηση της επιλογής<strong>Import Maven Projects automatically</strong>
+      που μπορείτε να την βρείτε πηγαίνοντας στο<strong>File → Settings → Build, Execution, Deployment → Build tools → Maven → Importing</strong></p>
+
+      <img src="apache-maven-unit7/apache-maven-unit7-9.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+    <p>Όταν αυτή η επιλογή είναι ενεργοποιημένη συγχρονίζεται αυτόματα το project 
+        με το IntelliJ κάθε φορά που γίνεται μια αλλαγή στο POM αρχείο.</p>
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+      
+                  
+                <div class="author-box">
+                    <div class="author-info flex flex-wrap">
+                        <div class="author-avatar">
+                            <img src="images/michail.jpg" alt="Michail Kassapoglou">
+
+                           
+                        </div><!-- .author-avatar -->
+
+                        <div class="author-details">
+                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
+
+                            <div class="entry-content mt-3">
+                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
+                                  τρόπο να χρησιμοποιείτε το Apache Maven για την δημιουργία όλων των Java και Java EE project σας. Ασχολούμαι με την τεχνική εκπαίδευση 
+                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
+                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
+                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
+                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
+                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
+                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
+                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
+                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .author-details -->
+                    </div><!-- .author-info -->
+                </div><!-- .author-box -->
+
+                
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+ 
+
+  
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
