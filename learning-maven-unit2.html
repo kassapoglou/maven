@@ -6,6 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων για το Apache Maven"> 
+    <meta name="robots" content="index, follow"> 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -147,7 +149,7 @@
             <div class="col-12 col-lg-12">
                 <div class="single-post-wrap">
                     
-                  
+<p><h3>ΔΩΡΕΑΝ ΜΑΘΗΜΑΤΑ APACHE MAVEN</h3></p>    
 <p>Στην σημερινή δωρεάν ενότητα Apache Maven, θα δούμε που ακριβώς 
     αποθηκεύονται όλες οι ρυθμίσεις του, τι σημαίνουν και πότε 
     μπορούμε να τις χρησιμοποιήσουμε, πως μπορούμε να λάβουμε βοήθεια
@@ -161,7 +163,7 @@
     για να ελέγξουμε την σωστή λειτουργία του Maven όπως και την έκδοση
     της Java που χρησιμοποιεί εκτελούμε την εντολή <strong>mvn -version</strong>.</p>
 
-<img src="apache-maven-unit2/apache-maven-unit2-1.JPG" alt="" class="center"><p></p>
+<img src="apache-maven-unit2/apache-maven-unit2-1.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
                     
 <p>Εάν θέλαμε να βρούμε όλες τις διαθέσιμες εντολές που μπορούμε 
     να εκτελέσουμε από το command prompt δεν έχουμε παρά να εκτελέσουμε 
@@ -171,7 +173,7 @@
     μάλιστα ότι η εντολή <strong>mvn -version</strong> είναι μια από τις διαθέσιμες επιλογές.</p>
 
 
-<img src="apache-maven-unit2/apache-maven-unit2-2.JPG" alt="" class="center"><p></p>
+<img src="apache-maven-unit2/apache-maven-unit2-2.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Τα βήματα εγκατάστασης του Apache Maven που έχουμε ακολουθήσει μέχρι αυτή 
     την στιγμή, είναι αρκετά για να μπορέσουμε να χτίσουμε Maven projects
@@ -186,13 +188,13 @@
         η πρώτη είναι στο αρχείο <strong>settings.xml</strong> το οποίο βρίσκεται
         μέσα στο <strong>conf</strong> φάκελο της εγκατάστασης του Maven. 
         Αυτές οι ρυθμίσεις εφαρμόζονται σε όλα τα maven projects για όλους τους χρήστες και για αυτό θεωρούνται global.
-        <img src="apache-maven-unit2/apache-maven-unit2-3.JPG" alt="" class="center"><p></p>
+        <img src="apache-maven-unit2/apache-maven-unit2-3.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
     </li>
     <li>
         Και η δεύτερη είναι πάλι σε ένα αρχείο με το όνομα <strong>settings.xml</strong>
         αλλά μέσα στο φάκελο <strong>.m2</strong> του <strong>user directory</strong>. 
         Αυτές οι ρυθμίσεις είναι προσωπικές για τον συγκεκριμένο χρήστη για αυτό και ονομάζονται user settings.
-        <img src="apache-maven-unit2/apache-maven-unit2-4.JPG" alt="" class="center"><p></p>
+        <img src="apache-maven-unit2/apache-maven-unit2-4.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
     </li>
 </ul>
 <p>Το Maven λοιπόν θα ψάξει και στις δύο αυτές τοποθεσίες 
@@ -213,7 +215,7 @@
     δεν έχουμε παρά να τρέξουμε την εντολή:</p>
 <p><strong>mvn help:evaluate -Dexpression=settings.localRepository</strong></p>
 
- <img src="apache-maven-unit2/apache-maven-unit2-5.JPG" alt="" class="center"><p></p>
+ <img src="apache-maven-unit2/apache-maven-unit2-5.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
  
  <p>Προσέξτε πριν από το help δεν υπάρχει παύλα (-). 
      Θα μιλήσουμε αργότερα επίσης και το τι σημαίνει η άνω κάτω τελεία ( : ) 
@@ -292,7 +294,7 @@
          τοποθεσία διαφορετική από το C:\ drive. Ο λόγος που το κάνω αυτός είναι
          βασικά πρακτικός. Ο φάκελος αυτός μπορεί να μεγαλώσει κατά πολύ σε μέγεθος
          όταν κατεβάζουμε καινούργιες βιβλιοθήκες κάθε φορά.
-          <img src="apache-maven-unit2/apache-maven-unit2-6.JPG" alt="" class="center"><p></p>
+          <img src="apache-maven-unit2/apache-maven-unit2-6.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
      </li>
      <li>
          <strong> InteractiveMode </strong>: Η προκαθορισμένη τιμή για αυτή την
@@ -368,8 +370,8 @@
          Αν όμως θέλετε μια πιο σταθερή λύση μπορούμε να
          δημιουργήσουμε μια ακόμη μεταβλητή στα <strong>Environment Variables</strong>
          των <strong>Windows 10</strong> και να δώσουμε το όνομα <strong>MAVEN_OPTS</strong> και την τιμή <strong>-Xmx1024m  -XX:MaxPermSize=128m</strong>
-         <img src="apache-maven-unit2/apache-maven-unit2-7.JPG" alt="" class="center"><p></p>
-         <img src="apache-maven-unit2/apache-maven-unit2-8.JPG" alt="" class="center"><p></p>
+         <img src="apache-maven-unit2/apache-maven-unit2-7.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+         <img src="apache-maven-unit2/apache-maven-unit2-8.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
      </li>
  </ul>
  
@@ -382,7 +384,7 @@
                 <div class="author-box">
                     <div class="author-info flex flex-wrap">
                         <div class="author-avatar">
-                            <img src="images/michail.jpg" alt="">
+                            <img src="images/michail.jpg" alt="Michail Kassapoglou">
 
                            
                         </div><!-- .author-avatar -->

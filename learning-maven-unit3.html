@@ -6,6 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων για το Apache Maven"> 
+    <meta name="robots" content="index, follow"> 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -147,7 +149,7 @@
             <div class="col-12 col-lg-12">
                 <div class="single-post-wrap">
                     
-
+<p><h3>ΔΩΡΕΑΝ ΜΑΘΗΜΑΤΑ APACHE MAVEN</h3></p> 
 <p>Στο σημερινό δωρεάν μάθημα Apache Maven, θα δημιουργήσουμε το πρώτο μας 
     Java Maven Project χρησιμοποιώντας το IntelliJ IDE. Επίσης, θα αναλύσουμε την δομή
     του project και θα εξηγήσουμε την σημαντική λειτουργία του <strong>POM.xml</strong> αρχείου.</p>  
@@ -172,7 +174,7 @@
     Δεν επιλέγουμε το “Create from archetype”. Το αφήνουμε κενό και θα το χρησιμοποιήσουμε 
     σε μελλοντική ενότητα. Πατάμε NEXT για να συνεχίσουμε στο επόμενο βήμα.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-1.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-1.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Στο επόμενο παράθυρο, ορίζουμε τα στοιχεία της εφαρμογής μας, όπως:</p>
 
@@ -192,11 +194,11 @@
     πάνω επιλογές, απλά πατήστε <strong>FINISH</strong> τώρα να δημιουργηθεί το project.
     Η πιο κάτω εικόνα σας δείχνει ένα παράδειγμα από τις δικές μου επιλογές.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-2.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-2.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Λογικά θα πρέπει να έχει δημιουργηθεί το παρακάτω project στο IntelliJ</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-3.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-3.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Αν και έχουμε επιλέξει να ενσωματώσουμε το Maven στο IntelliJ υπάρχει μια πιθανότητα να 
     προσπαθήσει το IDE να χρησιμοποιήσει τη δική του ενσωματωμένη έκδοση του Maven. 
@@ -206,7 +208,7 @@
 <p>Πηγαίνουμε στο <strong>File → Settings → Build, Execution, Deployment → Build Tools → Maven</strong>
     και ελέγξτε το Maven home directory.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-4.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-4.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Το Maven project που μόλις έχουμε δημιουργήσει ορίζεται από ένα αρχείο 
     που ονομάζεται POM.xml. Μέσα σε αυτό το αρχείο, βασικά θα βρούμε (ή θα προσθέσουμε εμείς)
@@ -273,7 +275,7 @@
 <p>Τώρα το ερώτημα είναι – που γράφουμε τον java κώδικα? Μέσα σε ποιο πακέτο? Πριν απαντήσουμε αυτό το ερώτημα ας 
     ανοίξουμε όλους τους φακέλους για να δούμε την ολική δομή του προγράμματος.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-5.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-5.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Έχουμε λοιπόν την εξής δομή:</p>
 
@@ -290,19 +292,19 @@
     Ας δημιουργήσουμε λοιπόν ένα πακέτο <strong>com.mycompany</strong> στο <strong>src/main/java</strong>
     κάνοντας δεξί κλικ επάνω του και επιλέγοντας<strong> New → Package</strong>.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-6.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-6.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Στο εμφανιζόμενο μικρό παράθυρο, γράφουμε com.mycompany. Το αποτέλεσμα θα πρέπει
     να είναι όπως αυτό της πιο κάτω εικόνας.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-7.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-7.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Τώρα κάνουμε δεξί κλικ επάνω στο πακέτο που μόλις δημιουργήσαμε και επιλέγουμε<strong> New → Java</strong> Class. 
     Ονομάζουμε την κλάση TestMaven και πατάμε ENTER. Ας γράψουμε ένα απλό 
     Java κώδικα που εμφανίζει το μήνυμα “Hello Maven” όταν εκτελεστεί.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-8.jpg" alt="apache-maven" class="center"><p></p>
-<img src="apache-maven-unit3/apache-maven-unit3-9.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-8.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-9.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Ας ανακεφαλαιώσουμε το τι έχουμε δημιουργήσει μέχρι τώρα. Με την χρήση του IntelliJ
     έχουμε δημιουργήσει ένα Java Project. Ορίσαμε μέσα στο pom.xml ότι το Java Project
@@ -313,11 +315,11 @@
     να τις εκτελέσουμε θα πρέπει να πατήσουμε δεξιά στην οθόνη μας το
     Maven tab έτσι ώστε να ανοίξει.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-10.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-10.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Κάνουμε expand το <strong>Lifecycle</strong> και επιλέγουμε <strong>install</strong>.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-11.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-11.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Οι εντολές που βλέπουμε ορίζουν το lifecycle του Maven και κατά συνέπειας 
     της εφαρμογής. Με αυτές, και γενικότερα με το lifecycle του Maven θα ασχοληθούμε στην επόμενη 
@@ -326,22 +328,22 @@
     Το τελικό αποτέλεσμα είναι να κατεβούν από το Internet όλες οι απαραίτητες βιβλιοθήκες
     που χρειάζεται το project για να τρέξει. Την πρώτη φορά ίσως πάρει λίγα λεπτά.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-12.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-12.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Θα παρατηρήσετε ότι τώρα υπάρχει ένας καινούργιος φάκελος στο 
     project που ονομάζεται <strong>target</strong> και περιέχει την τελική έκδοση της εφαρμογής σε <strong>jar</strong> μορφή.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-13.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-13.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Το project μας έχει δημιουργηθεί σωστά γιατί το αποτέλεσμα του build
     ήταν success. Τώρα δεν απομένει παρά να πάμε επάνω στο κύριο μενού και
     από το Run να επιλέξουμε Run TestMaven που είναι το όνομα του project μας.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-14.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-14.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Στην κονσόλα τα δείτε το μήνυμα που είχαμε γράψει στον κώδικα μας.</p>
 
-<img src="apache-maven-unit3/apache-maven-unit3-15.jpg" alt="apache-maven" class="center"><p></p>
+<img src="apache-maven-unit3/apache-maven-unit3-15.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
 
 <p>Τώρα που γνωρίζουμε την διαδικασία του να δημιουργούμε ένα απλό Java Maven Project
     μέχρι και την εκτέλεσή του, είμαστε έτοιμοι από 
@@ -353,7 +355,7 @@
                 <div class="author-box">
                     <div class="author-info flex flex-wrap">
                         <div class="author-avatar">
-                            <img src="images/michail.jpg" alt="">
+                            <img src="images/michail.jpg" alt="Michail Kassapoglou">
 
                            
                         </div><!-- .author-avatar -->
