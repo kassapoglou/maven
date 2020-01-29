@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Μαθαίνω Apache Maven</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων για το Apache Maven"> 
+    <meta name="robots" content="index, follow"> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="maven_style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150900548-1');
+</script>
+
+</head>
+<body class="single-blog-post">
+    <div class="page-header">
+           <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
+                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                  <!--  <li><a href="#">Register</a></li> -->
+                                <!--    <li><a href="#">Login</a></li> -->
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                 </div>   <!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                           
+                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                               
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 8 Apache Maven - Dependency Management (Part 2)</h1>
+
+                            <div class="entry-meta flex justify-content-center align-items-center">
+                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
+
+                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
+                            </div><!-- .entry-meta -->
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10">
+                <div class="featured-image">
+                  <!--  <img src="images/single-post.jpg" alt=""> -->
+
+                    <div class="posted-date position-absolute">
+                        <div class="day">29</div>
+                        <div class="month">Jan</div>
+                    </div><!-- .posted-date -->
+                </div><!-- .featured-image -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
+                <div class="post-share">
+                   
+
+                  
+                </div><!-- .post-share -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-12">
+                <div class="single-post-wrap">
+
+<p><h3>ΔΩΡΕΑΝ ΜΑΘΗΜΑΤΑ APACHE MAVEN</h3></p> 
+
+<p>Στην σημερινή ενότητα θα συνεχίσουμε την αναφορά μας στο Dependency Management του Apache Maven. 
+    Πριν όμως μπούμε σε περισσότερες λεπτομέρειες του Dependency Management ας δούμε
+     λίγο πόσο σημαντικός είναι ο αριθμός αλλά και το όνομα που έχουμε δηλώσει στο <strong><version></strong> του project μας.</p>
+
+<img src="apache-maven-unit8/apache-maven-unit8-1.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Σε ένα περιβάλλον Maven, είναι πολύ σημαντικό να κατανοήσουμε την χρήση των version αριθμών. Αν έχουμε
+     μια μελετημένη στρατηγική από την αρχή του Project τότε θα μειώσουμε σε μεγάλο βαθμό το φόρτο
+      εργασίας για το Dependency Management. Μια βασική γνώση σε έννοιες σχετικά με τον τρόπο που 
+      λειτουργούν οι version αριθμοί είναι απαραίτητη στην προγραμματιστική σας καριέρα.</p>
+
+<p>Γενικότερα το Maven ακολουθεί τον εξής τρόπο για να διαχειριστεί τις εκδόσεις των project μας:</p>
+<ul>
+    <li><strong>MajorVersion</strong></li>
+    <li><strong>MinorVersion</strong></li>
+    <li><strong>IncrementalVersion</strong></li>
+    <li><strong>BuildNumber</strong></li>
+    <li><strong>Qualifier</strong></li>
+</ul>
+<p>Για παράδειγμα:</p>
+<p><strong>3.2.1-987-beta</strong></p>
+<ul>
+    <li><strong>MajorVersion: </strong>3</li>
+    <li><strong>MinorVersion: </strong>2</li>
+    <li><strong>IncrementalVersion: </strong>1</li>
+    <li><strong>BuildNumber: </strong>987</li>
+    <li><strong>Qualifier: </strong>beta</li>
+</ul>
+
+<p>Συνήθως οι εταιρείες δεν έχουν τόσο μεγάλους και αναλυτικούς αριθμούς στα project τους. 
+    Η πιο συνηθισμένη προσέγγιση είναι να έχουν μόνο το Major και Minor
+     αριθμό ή κάποιες επιλέγουν να προσθέσουν και τον Incremental αριθμό.</p>
+
+<p>Αυτό όμως που έχει μεγάλη σημασία, είναι η λέξη SNAPSHOT που έχουμε προσθέσει στο 
+    δικό μας project. Για να το καταλάβετε καλύτερα, ας περιγράψουμε ένα παράδειγμα.
+     Σκεφτείτε λοιπόν ότι το δικό μας project (ας το ονομάσουμε project A) το έχουμε 
+     ανεβάσει σε ένα repository και στο version number έχουμε αφήσει την λέξη SNAPSHOT 
+     γιατί ακόμα δεν έχουμε ολοκληρώσει όλο τον κώδικα. Κάποιο άλλο project (project B)
+      χρειάζεται να κατεβάσει και να χρησιμοποιήσει σαν βιβλιοθήκη το project A έτσι ώστε 
+      να μην αναγκαστεί να ξαναγράψει τον ίδιο κώδικα. Προσθέτουμε λοιπόν το project A στο
+       POM του καινούργιου project B σαν dependency όπως ακριβώς κάναμε και στο προηγούμενο
+        παράδειγμα μας. Αν προσπαθήσουμε τώρα να κάνουμε <strong>mvn clean install</strong> στο project B,
+         το Maven θα αντιληφθεί ότι κάποιο dependency δεν είναι στην τελική του μορφή (αυτό
+          του Project A) και αν και εφόσον κατεβάσει την πιο τελευταία έκδοση θα συνεχίσει 
+          να ελέγχει το remote repository για καινούργιες εκδόσεις μια φορά την μέρα. Αυτή 
+          η διαδικασία θα σταματήσει όταν διαγράψουμε την λέξη SNAPSHOT από το version του
+           project A γιατί τότε θα το χαρακτηρίσει σαν stable version οπότε το Maven δεν
+            θα ελέγξει ξανά για καινούργιες εκδόσεις του συγκεκριμένου dependency.</p>
+
+<p>Ας δούμε μερικά ακόμα χαρακτηριστικά του dependency management προσθέτοντας ένα ακόμα dependency.
+     Όπως ήδη έχετε μαντέψει, και αυτό το dependency θα προστεθεί μέσα στην κατηγορία dependencies
+      όπου ανήκει ήδη το commons-lang. Για αυτό το παράδειγμα, θα προσθέσουμε την βιβλιοθήκη του
+       hibernate η οποία μας δίνει έναν πολύ εύκολο τρόπο να μπορούμε να γράψουμε και να διαβάσουμε
+        δεδομένα από μια βάση. Δεν θα γράψουμε κάποιο java κώδικα αλλά μόνο θα συγκεντρωθούμε
+         στο πως δουλεύει το Maven. Προσθέτουμε λοιπόν το παρακάτω dependency όπως το  ορίζει το MVNRepository</p>
+
+         <img src="apache-maven-unit8/apache-maven-unit8-2.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Για αυτή την συγκεκριμένη βιβλιοθήκη που προσπαθούμε να προσθέσουμε στο project μας, 
+    υπάρχουν μερικά αξιόλογα σημεία στα οποία μπορούμε να αναφερθούμε. Κατά αρχάς,
+     παρατηρήστε ότι στο version υπάρχει η λέξη Final. Με αυτό τον τρόπο ενημερώνεται 
+     το Maven ότι δεν θα υπάρξουν άλλες αναβαθμίσεις αυτής της βιβλιοθήκης, οπότε από την
+      στιγμή που την κατεβάσει τοπικά στον υπολογιστή μας (local repository) δεν θα
+       ελέγξει ξανά για νέες εκδόσεις.</p>
+
+<p>Λίγο πιο κάτω από το πλαίσιο με τον ορισμό του hibernate-tools dependency, θα βρείτε έναν πίνακα
+     με όλα τα άλλα dependencies στα οποία στηρίζεται η συγκεκριμένη βιβλιοθήκη. Σε αυτό εδώ 
+     ακριβώς το σημείο είναι που νιώθετε τυχεροί που έχετε επιλέξει το Maven σαν το Build tool για το project σας.</p>
+
+     <img src="apache-maven-unit8/apache-maven-unit8-3.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Αν κατεβάσετε την βιβλιοθήκη μόνοι σας, θα πρέπει να κατεβάσετε και όλα τα άλλα
+     jars από τα οποία εξαρτάται η σωστή λειτουργία της βιβλιοθήκης. Αυτή από μόνη 
+     της είναι μια πολύ επίπονη διαδικασία που πολλές φορές δεν είναι και απόλυτα
+      επιτυχής. Ευτυχώς για εμάς δεν χρειάζεται να ασχοληθούμε με αυτή την διαδικασία,
+       γιατί το Maven από μόνο του θα κατεβάσει και την επιθυμητή βιβλιοθήκη αλλά και όλες
+        τις άλλες βιβλιοθήκες από τις οποίες εξαρτάται. Ας προσθέσουμε λοιπόν και αυτό το
+         dependency στο pom και ας τρέξουμε την εντολή <strong>mvn clean install</strong>. Λογικό είναι να
+          παρατηρήσετε ότι αρκετές βιβλιοθήκες κατεβαίνουν από το central repository μέχρι
+           με επιτυχία να γίνει build το project μας.</p>
+
+           <img src="apache-maven-unit8/apache-maven-unit8-4.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+
+           <p><strong>pom.xml</strong></p>
+           <pre class="prettyprint"><xmp>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <project xmlns="http://maven.apache.org/POM/4.0.0"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                <modelVersion>4.0.0</modelVersion>
+            
+                <groupId>com.mycompany</groupId>
+                <artifactId>HelloMaven</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            
+                <properties>
+                    <maven.compiler.target>11</maven.compiler.target>
+                    <maven.compiler.source>11</maven.compiler.source>
+                </properties>
+            
+                <packaging>jar</packaging>
+            
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-lang3</artifactId>
+                        <version>3.9</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-tools</artifactId>
+                        <version>5.4.10.Final</version>
+                    </dependency>
+                </dependencies>
+            </project>
+           </xmp></pre>
+
+    <p> Αν κοιτάξετε και το φάκελο external libraries θα δείτε περισσότερα αρχεία από ότι περιμένατε.
+         Σε όλα αυτά στηρίζεται το hibernate-tools για να λειτουργήσει. Μπορείτε να
+          φανταστείτε να βρείτε, να κατεβάσετε και να προσθέσετε μόνοι σας όλα αυτά 
+          τα jars στο project?</p>
+
+<img src="apache-maven-unit8/apache-maven-unit8-5.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Αν τώρα σβήσετε το version αριθμό από ένα dependency και πατήσετε<strong>Ctrl + Space Bar</strong>
+     θα εμφανιστεί η λίστα με όλες τις διαθέσιμες εκδόσεις του συγκεκριμένου dependency.</p>
+
+     <img src="apache-maven-unit8/apache-maven-unit8-6.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Πριν κλείσουμε αυτή την ενότητα, ας δούμε μερικές χρήσιμες Apache Maven εντολές που μπορούμε να
+     εκτελέσουμε και να πάρουμε πληροφορίες για τα dependencies που έχουμε δηλώσει στο pom.</p>
+
+<p>Η πρώτη εντολή είναι η <strong>mvn versions:display-dependency-updates</strong>
+     η οποία ελέγχει αν υπάρχουν νεότερες εκδόσεις των dependencies που πρέπει να κατεβάσουμε.</p>
+
+     <img src="apache-maven-unit8/apache-maven-unit8-7.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+     <img src="apache-maven-unit8/apache-maven-unit8-8.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<p>Η δεύτερη εντολή μας δείχνει την εξάρτηση που έχουν τα dependencies που έχουν
+     δηλώσει από άλλες βιβλιοθήκες. Η εντολή είναι <strong>mvn dependency:tree</strong>
+      και μας δείχνει με την μορφή δέντρου όλες τις σχέσεις μεταξύ των jars.</p>
+
+      <img src="apache-maven-unit8/apache-maven-unit8-9.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+      <img src="apache-maven-unit8/apache-maven-unit8-10.JPG" alt="Μαθήματα Apache Maven" class="center"><p></p>
+
+<!-- ---------------------------------------------------------------------------------------- -->
+      
+                  
+                <div class="author-box">
+                    <div class="author-info flex flex-wrap">
+                        <div class="author-avatar">
+                            <img src="images/michail.jpg" alt="Michail Kassapoglou">
+
+                           
+                        </div><!-- .author-avatar -->
+
+                        <div class="author-details">
+                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
+
+                            <div class="entry-content mt-3">
+                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
+                                  τρόπο να χρησιμοποιείτε το Apache Maven για την δημιουργία όλων των Java και Java EE project σας. Ασχολούμαι με την τεχνική εκπαίδευση 
+                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
+                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
+                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
+                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
+                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
+                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
+                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
+                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .author-details -->
+                    </div><!-- .author-info -->
+                </div><!-- .author-box -->
+
+                
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+ 
+
+  
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
