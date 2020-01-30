@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων για το Apache Maven"> 
+    <meta name="description" content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων για το Apache Maven"> 
     <meta name="robots" content="index, follow"> 
 
     <!-- Bootstrap CSS -->
@@ -174,7 +174,7 @@
     προτιμήσουμε και εμείς να κατεβάσουμε και να εγκαταστήσουμε την έκδοση Java SE 11.0.5. 
     Όλα τα παραδείγματα σε αυτή την ενότητα είναι σε Windows 10.</p>
 
-<img src="apache-maven-unit1/apache-maven-unit1-1.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>
+<img src="apache-maven-unit1/apache-maven-unit1-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
                     
 <p>Μετά το πέρας της εγκατάστασης της Java SE 11.0.5. θα πρέπει να δηλώσουμε στα 
     Windows 10 που έχει εγκατασταθεί η Java έτσι ώστε να μπορούμε να την καλέσουμε από
@@ -184,31 +184,31 @@
     βρίσκεται η Java.</p>
 
 
-   <img src="apache-maven-unit1/apache-maven-unit1-2.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>                 
+   <img src="apache-maven-unit1/apache-maven-unit1-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>                 
                     
    <p>Τώρα θα πρέπει να δηλώσουμε στα Windows 10 την τοποθεσία που βρίσκεται
        το εκτελέσιμο αρχείο της Java (java.exe).  Επιλέγουμε την System Variable 
        <strong>Path</strong> και κάνουμε κλικ στο κουμπί <strong>Edit</strong>.</p>      
                     
-    <img src="apache-maven-unit1/apache-maven-unit1-3.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>       
+    <img src="apache-maven-unit1/apache-maven-unit1-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>       
     
     <p>Δηλώστε την μεταβλητή <strong>JAVA_HOME</strong> που έχετε ορίσει συν τον <strong>bin</strong>
         φάκελλο μέσα στον οποίο βρίσκεται το εκτελέσιμο αρχείο της Java. Πατήστε <strong>ΟΚ</strong> να 
         ολοκληρώσετε την διαδικασία.</p>
     
-    <img src="apache-maven-unit1/apache-maven-unit1-4.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p>  
+    <img src="apache-maven-unit1/apache-maven-unit1-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>  
     
     <p>Αν ανοίξουμε ένα cmd terminal στα Windows 10 και γράψουμε <strong>java -version </strong>θα πρέπει
         να λάβουμε το ακόλουθο αποτέλεσμα:</p>
     
-     <img src="apache-maven-unit1/apache-maven-unit1-5.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p> 
+     <img src="apache-maven-unit1/apache-maven-unit1-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
      
      <p>Σαν δεύτερο βήμα τώρα, θα πρέπει να κατεβάσουμε και να αποσυμπιέσουμε το
          Apache Maven. Από το web site της 
          Apache <a href="https://maven.apache.org/download.cgi"><font color="#0000CC">(https://maven.apache.org/download.cgi)</font> </a>
          κατεβάζουμε την τελευταία έκδοση του Maven η οποία είναι η 3.6.3.</p>
      
-     <img src="apache-maven-unit1/apache-maven-unit1-6.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p> 
+     <img src="apache-maven-unit1/apache-maven-unit1-6.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
      
      <p>Αφού κατεβάσουμε το αρχείο, το κάνουμε unzip μέσα στο folder
          ή directory που επιθυμούμε. Για να μπορέσουμε όμως να καλέσουμε το Maven 
@@ -217,19 +217,19 @@
          Δηλώνουμε λοιπόν μια καινούργια μεταβλητή με το όνομα <strong>M2_HOME</strong> η οποία θα έχει
          σαν τιμή το path στο οποίο βρίσκεται το unzip αρχείο του Maven.</p>
      
-      <img src="apache-maven-unit1/apache-maven-unit1-7.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p> 
+      <img src="apache-maven-unit1/apache-maven-unit1-7.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
       
       <p>Τώρα θα πρέπει να δηλώσουμε στα Windows 10 που βρίσκεται το εκτελέσιμο αρχείο 
           του Maven. Οπότε επιλέγουμε πάλι την μεταβλητή<strong> Path</strong>, πατάμε <strong>Edit</strong> και προσθέτουμε
           την <strong>M2_HOME</strong> μεταβλητή μαζί με τον bin φάκελο του Maven.
           Πατήστε<strong> ΟΚ</strong> όταν τελειώσετε την διαδικασία.</p>
       
-      <img src="apache-maven-unit1/apache-maven-unit1-8.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p> 
+      <img src="apache-maven-unit1/apache-maven-unit1-8.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
       
       <p>Αν λοιπόν ανοίξουμε ένα cmd terminal και εκτελέσουμε την εντολή <strong>mvn -v</strong> θα πρέπει
           να πάρουμε πίσω το εξής αποτέλεσμα:</p>
 
-       <img src="apache-maven-unit1/apache-maven-unit1-9.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p> 
+       <img src="apache-maven-unit1/apache-maven-unit1-9.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
        
        <p>Μέχρι αυτό το σημείο έχουμε εγκαταστήσει όλα τα εργαλεία
            που χρειάζονται για να δημιουργήσουμε java projects με το 
@@ -244,7 +244,7 @@
            να κατεβάσετε από εδώ:
           <a href="https://www.jetbrains.com/idea/download/#section=windows"><font color="#0000CC">(https://www.jetbrains.com/idea/download/#section=windows)</font> </a>  . </p>
        
-       <img src="apache-maven-unit1/apache-maven-unit1-10.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p> 
+       <img src="apache-maven-unit1/apache-maven-unit1-10.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
        
        <p>Αφού το εγκαταστήσετε, ξεκινήστε το για να πάμε στις επιλογές του. 
            Ίσως χρειαστεί να δημιουργήσετε ένα πρόχειρο Java project για 
@@ -254,7 +254,7 @@
            αλλάζουμε το Maven Home Directory σε αυτό που έχουμε ήδη εγκαταστήσει.
            Δεν χρειάζεται να το ξαναγράψετε, θα είναι έτοιμη η επιλογή για να την επιλέξετε.</p>
        
-        <img src="apache-maven-unit1/apache-maven-unit1-11.jpg" alt="Μαθήματα Apache Maven" class="center"><p></p> 
+        <img src="apache-maven-unit1/apache-maven-unit1-11.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
         
         <p>Πατήστε<strong> Apply</strong> και μετά <strong>ΟΚ</strong> για να ολοκληρώσετε την διαδικασία.</p>
         
