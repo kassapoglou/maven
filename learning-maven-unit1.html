@@ -1,314 +1,668 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Μαθαίνω Apache Maven</title>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- set the HandheldFriendly -->
+	<meta name="HandheldFriendly" content="True">
+	<!-- set the description -->
+	<meta name="description"
+	content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων για το Apache Maven">
+	<!-- set the Keyword -->
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="maven, apache, apache maven, δωρεάν, seminaria maven, mathimata maven,
+               προγραμματισμός, δωρεάν μαθήματα maven, δωρεάν σεμινάρια maven, μαθήματα maven, σεμινάρια maven" />
+	<meta name="author" content="Michail Kassapoglou" />
+	<!-- set the page title -->
+	<title>Δωρεάν Μαθήματα Apache Maven</title>
+	<!-- include google roboto font cdn link -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<!-- include the site bootstrap stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/plugins.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/colors.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- include the site responsive stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων για το Apache Maven"> 
-    <meta name="robots" content="index, follow"> 
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!-- ElegantFonts CSS -->
-    <link rel="stylesheet" href="css/elegant-fonts.css">
-
-    <!-- themify-icons CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="css/swiper.min.css">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="maven_style.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-150900548-1');
-</script>
-
+		gtag('config', 'UA-150900548-1');
+	</script>
 </head>
-<body class="single-blog-post">
-    <div class="page-header">
-           <header class="site-header">
-            <div class="top-header-bar">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
-                            <div class="header-bar-email d-flex align-items-center">
-                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
-                            </div><!-- .header-bar-email -->
+<body>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<!-- header of the page -->
+		<header id="page-header">
+			<!-- top bar -->
+			<div class="top-bar bg-dark text-gray">
+				<div class="container">
+					<div class="row top-bar-holder">
+						<div class="col-xs-9 col">
+							<!-- bar links -->
+							<ul class="font-lato list-unstyled bar-links">
+								<li>
+									<a href="tel:+30 6976434707">
+										<strong class="dt element-block text-capitalize hd-phone">Phone :</strong>
+										<strong class="dd element-block hd-phone">+(30) 6976434707 </strong>
+										<i class="fas fa-phone-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">phone</span></i>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:michail.kassapoglou@gmail.com">
+										<strong class="dt element-block text-capitalize hd-phone">Email :</strong>
+										<strong class="dd element-block hd-phone">michail.kassapoglou@gmail.com</strong>
+										<i class="fas fa-envelope-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">email</span></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xs-3 col justify-end">
+							<!-- user links -->
+							<!--<ul class="list-unstyled user-links fw-bold font-lato">-->
+							<!--	<li><a href="#popup1" class="lightbox">Login</a> <span class="sep">|</span> <a href="#popup2" class="lightbox">Register</a></li>-->
+							<!--</ul>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header holder -->
+			<div class="header-holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6 col-sm-3">
+							<!-- logo -->
+							<div class="logo">
+								<a href="index.html">
+									<img src="images/logo.png" alt="KASSAPOGLOU">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-9 static-block">
+							<!-- nav -->
+							<nav id="nav" class="navbar navbar-default">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								<!-- navbar collapse -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<!-- main navigation -->
+									<ul class="nav navbar-nav navbar-right main-navigation text-uppercase font-lato">
+										<li class="dropdown">
+											<a href="https://kassapoglou.github.io/main/">ΑΡΧΙΚΗ</a>
+											<!-- <ul class="dropdown-menu"> -->
+												<!--<li><a href="home.html">Home</a></li>-->
+											<!--	<li><a href="home2.html">Home 2</a></li>
+												<li><a href="home3.html">Home 3</a></li>-->
+											<!--</ul> -->
+										</li>
+										<li class="dropdown">
+											<a href="https://kassapoglou.github.io/main/training-events.html" >ΠΡΟΓΡΑΜΜΑ</a>
+											<!--<ul class="dropdown-menu"> -->
+												<!--<li><a href="courses-list.html">Course List</a></li>-->
+												<!--<li><a href="course-single.html">Course Single</a></li>-->
+										<!--	</ul> -->
+										</li>
+										<ul class="nav navbar-nav navbar-right main-navigation text-uppercase font-lato">
+											<li class="dropdown">
+												<a href="https://kassapoglou.github.io/main/course-list-all.html">ΜΑΘΗΜΑΤΑ</a>
+												<!-- <ul class="dropdown-menu"> -->
+													<!--<li><a href="home.html">Home</a></li>-->
+												<!--	<li><a href="home2.html">Home 2</a></li>
+													<li><a href="home3.html">Home 3</a></li>-->
+												<!--</ul> -->
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ΧΟΡΗΓΟΙ</a>
+												<!--<ul class="dropdown-menu"> -->
+													<!--<li><a href="courses-list.html">Course List</a></li>-->
+													<!--<li><a href="course-single.html">Course Single</a></li>-->
+											<!--	</ul> -->
+											</li>
+										<li class="dropdown">
+											<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ΠΡΟΓΡΑΜΜΑ</a>-->
+											<!--<ul class="dropdown-menu">-->
+												<!--<li><a href="events-list.html">Event List</a></li>-->
+												<!--<li><a href="event-sigle.html">Event Single</a></li>-->
+											<!--</ul>-->
+										</li> 
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ΤΕΧΝΟΛΟΓΙΑ</a>
+										<!--	<ul class="dropdown-menu">-->
+											<!--	<li><a href="404.html">404 Page</a></li>
+												<li><a href="about-us.html">About us</a></li>
+												<li><a href="forum.html">Forum Page</a></li>
+												<li><a href="forum-single.html">Forum Single</a></li>
+												<li><a href="instructors-list.html">Instructors List</a></li>
+												<li><a href="instructor-single.html">Instructors Single</a></li>
+												<li><a href="login-register.html">Login &amp; Register</a></li> -->
+										<!--	</ul>-->
+										</li>
+										<li class="dropdown">
+											<a href="https://kassapoglou.github.io/main/contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+										<!--	<ul class="dropdown-menu">
+												<li><a href="blog.html">Blog List</a></li>
+												<li><a href="blog-single.html">Blog Single</a></li>
+											</ul> -->
+										</li>
+									<!--	<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+											<ul class="dropdown-menu">
+												<li><a href="shop.html">Shop List</a></li>
+												<li><a href="single-product.html">Shop Single</a></li>
+												<li><a href="cartage.html">Cart Page</a></li>
+												<li><a href="checkout.html">Checkout</a></li>
+											</ul>
+										</li>-->
+										
+									</ul>
+								</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- contain main informative part of the site -->
+		<main id="main">
+			<!-- heading banner -->
+			<header class="heading-banner text-white bgCover" style="background-image: url(images/maven.jfif);">
+				<div class="container holder">
+					<div class="align">
+						<h1>Apache Maven</h1>
+					</div>
+				</div>
+			</header>
+			<!-- breadcrumb nav -->
+			<nav class="breadcrumb-nav">
+				<div class="container">
+					<!-- breadcrumb -->
+					<ol class="breadcrumb">
+						<li><a href="home.html">ΑΡΧΙΚΗ</a></li>
+						<li><a href="https://kassapoglou.github.io/main/course-list-all.html">ΜΑΘΗΜΑΤΑ</a></li>
+						<li class="active">MAVEN</li>
+					</ol>
+				</div>
+			</nav>
+			<!-- two columns -->
+			<div id="two-columns" class="container">
+				<div class="row">
+					<!-- content -->
+					<article id="content" class="col-xs-12 col-md-9">
+						<!-- content h1 -->
+						<h1 class="content-h1 fw-semi">ΕΝΟΤΗΤΑ 1 - Setting Up Apache Maven</h1>
+						<!-- view header -->
+						<header class="view-header row">
+							<div class="col-xs-12 col-sm-9 d-flex">
+								<div class="d-col">
+									<!-- post author -->
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="#"><img src="michail.jpg" class="rounded-circle" alt="image description"></a>
+										</div>
+										<div class="description-wrap">
+											<h2 class="author-heading"><a href="#">Εισηγητής</a></h2>
+											<h3 class="author-heading-subtitle text-uppercase">ΜΙΧΑΛΗΣ ΚΑΣΑΠΟΓΛΟΥ</h3>
+										</div>
+									</div>
+								</div>
+								<div class="d-col">
+									<!-- post author -->
+									<div class="post-author">
+										<div class="alignleft no-shrink icn-wrap">
+											<i class="far fa-bookmark"></i>
+										</div>
+										<div class="description-wrap">
+											<h2 class="author-heading"><a href="#">Κατηγορία</a></h2>
+											<h3 class="author-heading-subtitle text-uppercase">TOOLS</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--<div class="col-xs-12 col-sm-3">
+								<div class="rating-holder">
+									<ul class="star-rating list-unstyled justify-end">
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+									</ul>
+									<strong class="element-block text-right subtitle fw-normal">(2 Reviews)</strong>
+								</div>
+							</div>-->
+						</header>
+						<div class="aligncenter content-aligncenter">
+							<img src="images/maven.png" alt="image description">
+						</div>
+						<h3 class="content-h3">ΕΝΟΤΗΤΑ 1 - Setting Up Apache Maven</h3>
+						<p>Αυτή είναι η πρώτη από μια σειρά δωρεάν ενοτήτων στην τεχνολογία Apache Maven. Η γνώση και η εκπαίδευση στην λειτουργία του Apache Maven είναι απαραίτητη εάν και εφόσον θέλετε γίνεται Java προγραμματιστές. Το Apache Maven είναι ένα ανοιχτού-κώδικα project που έχει ένα δομημένο και απλό τρόπο να δημιουργεί, να διαχειρίζεται και να τεστάρει java projects. Παρέχει όμως και άλλες δυνατότητες όπως εύκολη διαχείριση των βιβλιοθηκών στις οποίες στηρίζεται το project αλλά και εύκολη συμβατότητα και επικοινωνία με προϊόντα όπως Jenkins και Bamboo. Πριν όμως αναλύσουμε όλες τις δυνατότητες του και πως αυτές συνδυάζονται με την Java γλώσσα προγραμματισμού, θα πρέπει να το εγκαταστήσουμε και να το ενσωματώσουμε με το αγαπημένο μας IDE (περιβάλλον ανάπτυξης Java εφαρμογών). Ας δούμε λοιπόν τα βήματα που πρέπει να ακολουθήσουμε για να εγκαταστήσουμε επιτυχώς το Apache Maven.</p>
 
-                            <div class="header-bar-text lg-flex align-items-center">
-                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
-                            </div><!-- .header-bar-text -->
-                        </div><!-- .col -->
-
-                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                            <div class="header-bar-search">
-                                <form class="flex align-items-stretch">
-                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
-                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
-                                </form>
-                            </div><!-- .header-bar-search -->
-
-                            <div class="header-bar-menu">
-                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                                  <!--  <li><a href="#">Register</a></li> -->
-                                <!--    <li><a href="#">Login</a></li> -->
-                                </ul>
-                            </div><!-- .header-bar-menu -->
-                        </div><!-- .col -->
-                    </div><!-- .row -->
-                 </div>   <!-- .container-fluid -->
-            </div><!-- .top-header-bar -->
-
-            <div class="nav-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-9 col-lg-3">
-                            <div class="site-branding">
-                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
-                            </div><!-- .site-branding -->
-                        </div><!-- .col -->
-
-                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
-                            <nav class="site-navigation flex justify-content-end align-items-center">
-                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
-                                    <li><a href="https://kassapoglou.github.io/main">Home</a></li>
-                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
-                                </ul>
-
-                                <div class="hamburger-menu d-lg-none">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div><!-- .hamburger-menu -->
-
-                               
-                            </nav><!-- .site-navigation -->
-                        </div><!-- .col -->
-                    </div><!-- .row -->
-                </div><!-- .container -->
-            </div><!-- .nav-bar -->
-        </header><!-- .site-header -->
-
-        <div class="page-header-overlay">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <header class="entry-header">
-                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 1 Apache Maven - Setting up Maven </h1>
-
-                            <div class="entry-meta flex justify-content-center align-items-center">
-                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
-
-                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
-                            </div><!-- .entry-meta -->
-                        </header><!-- .entry-header -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .page-header-overlay -->
-    </div><!-- .page-header -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 offset-lg-1 col-lg-10">
-                <div class="featured-image">
-                  <!--  <img src="images/single-post.jpg" alt=""> -->
-
-                    <div class="posted-date position-absolute">
-                        <div class="day">27</div>
-                        <div class="month">Dec</div>
-                    </div><!-- .posted-date -->
-                </div><!-- .featured-image -->
-            </div><!-- .col -->
-        </div><!-- .row -->
-
-        <div class="row">
-            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
-                <div class="post-share">
-                   
-
-                  
-                </div><!-- .post-share -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-lg-12">
-                <div class="single-post-wrap">
-
-<p><h3>ΔΩΡΕΑΝ ΜΑΘΗΜΑΤΑ APACHE MAVEN</h3></p>
-<p>Αυτή είναι η πρώτη από μια σειρά δωρεάν ενοτήτων στην τεχνολογία Apache Maven. 
-    Η γνώση και η εκπαίδευση στην λειτουργία του Apache Maven είναι απαραίτητη εάν και εφόσον θέλετε
-    γίνεται Java προγραμματιστές. Το Apache Maven είναι ένα ανοιχτού-κώδικα project που έχει ένα
-    δομημένο και απλό τρόπο να δημιουργεί, να διαχειρίζεται και να τεστάρει java projects.
-    Παρέχει όμως και άλλες δυνατότητες όπως εύκολη διαχείριση των βιβλιοθηκών στις οποίες 
-    στηρίζεται το project αλλά και εύκολη συμβατότητα και επικοινωνία με προϊόντα όπως 
-    Jenkins και Bamboo. Πριν όμως αναλύσουμε όλες τις δυνατότητες του και πως αυτές 
-    συνδυάζονται με την Java γλώσσα προγραμματισμού, θα πρέπει να το εγκαταστήσουμε
-    και να το ενσωματώσουμε με το αγαπημένο μας IDE (περιβάλλον ανάπτυξης Java εφαρμογών).
-    Ας δούμε λοιπόν τα βήματα που πρέπει να ακολουθήσουμε για να εγκαταστήσουμε επιτυχώς
-    το Apache Maven.</p>
-
-
-<p>Το Apache Maven είναι μια εφαρμογή που στηρίζεται στην Java για να 
-    λειτουργήσει σωστά. Οπότε σαν πρώτο βήμα θα πρέπει να εγκαταστήσουμε 
-    το Java Development Kit (JDK) και να το δηλώσουμε σωστά στο λειτουργικό
-    μας σύστημα. Αν κοιτάξουμε το web site της 
-    Oracle <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html"><font color="#0000CC">(https://www.oracle.com/technetwork/java/javase/downloads/index.html)</font> </a>,  
-    θα παρατηρήσουμε ότι αν και η τελευταία έκδοση της Java είναι η 13.0.1, η έκδοση
-    11.0.5 είναι εκείνη που θα υποστηρίζεται για αρκετό καιρό επειδή η Oracle την
-    έχει χαρακτηρίσει σαν LTS (Long-Term Support). Για αυτό ακριβώς το λόγο, θα 
-    προτιμήσουμε και εμείς να κατεβάσουμε και να εγκαταστήσουμε την έκδοση Java SE 11.0.5. 
-    Όλα τα παραδείγματα σε αυτή την ενότητα είναι σε Windows 10.</p>
-
-<img src="apache-maven-unit1/apache-maven-unit1-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
-                    
-<p>Μετά το πέρας της εγκατάστασης της Java SE 11.0.5. θα πρέπει να δηλώσουμε στα 
-    Windows 10 που έχει εγκατασταθεί η Java έτσι ώστε να μπορούμε να την καλέσουμε από
-    οποιοδήποτε directory μέσα από το command terminal. Για αυτόν το σκοπό, θα πρέπει να 
-    πάμε στα Environment Variables των Windows 10 και να δημιουργήσουμε μια καινούργια 
-    μεταβλητή με το όνομα <strong>JAVA_HOME</strong> η οποία θα έχει σαν Value το path στο οποίο
-    βρίσκεται η Java.</p>
-
-
-   <img src="apache-maven-unit1/apache-maven-unit1-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>                 
-                    
-   <p>Τώρα θα πρέπει να δηλώσουμε στα Windows 10 την τοποθεσία που βρίσκεται
-       το εκτελέσιμο αρχείο της Java (java.exe).  Επιλέγουμε την System Variable 
-       <strong>Path</strong> και κάνουμε κλικ στο κουμπί <strong>Edit</strong>.</p>      
-                    
-    <img src="apache-maven-unit1/apache-maven-unit1-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>       
-    
-    <p>Δηλώστε την μεταβλητή <strong>JAVA_HOME</strong> που έχετε ορίσει συν τον <strong>bin</strong>
-        φάκελλο μέσα στον οποίο βρίσκεται το εκτελέσιμο αρχείο της Java. Πατήστε <strong>ΟΚ</strong> να 
-        ολοκληρώσετε την διαδικασία.</p>
-    
-    <img src="apache-maven-unit1/apache-maven-unit1-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>  
-    
-    <p>Αν ανοίξουμε ένα cmd terminal στα Windows 10 και γράψουμε <strong>java -version </strong>θα πρέπει
-        να λάβουμε το ακόλουθο αποτέλεσμα:</p>
-    
-     <img src="apache-maven-unit1/apache-maven-unit1-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+						<p>Το Apache Maven είναι μια εφαρμογή που στηρίζεται στην Java για να 
+							λειτουργήσει σωστά. Οπότε σαν πρώτο βήμα θα πρέπει να εγκαταστήσουμε 
+							το Java Development Kit (JDK) και να το δηλώσουμε σωστά στο λειτουργικό
+							μας σύστημα. Αν κοιτάξουμε το web site της 
+							Oracle <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html"><font color="#0000CC">(https://www.oracle.com/technetwork/java/javase/downloads/index.html)</font> </a>,  
+							θα παρατηρήσουμε ότι αν και η τελευταία έκδοση της Java είναι η 16, η έκδοση
+							11 είναι εκείνη που θα υποστηρίζεται για αρκετό καιρό επειδή η Oracle την
+							έχει χαρακτηρίσει σαν LTS (Long-Term Support). Για αυτό ακριβώς το λόγο, θα 
+							προτιμήσουμε και εμείς να κατεβάσουμε και να εγκαταστήσουμε την έκδοση Java SE 11. 
+							Όλα τα παραδείγματα σε αυτή την ενότητα είναι σε Windows 10.</p>
+						
+						<img src="apache-maven-unit1/apache-maven-unit1-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+											
+						<p>Μετά το πέρας της εγκατάστασης της Java SE 11.0.11. θα πρέπει να δηλώσουμε στα 
+							Windows 10 που ακριβώς έχει εγκατασταθεί η Java έτσι ώστε να μπορούμε να την καλέσουμε από
+							οποιοδήποτε directory μέσα από το command terminal. Για αυτόν το σκοπό, θα πρέπει να 
+							πάμε στα Environment Variables των Windows 10 και να δημιουργήσουμε μια καινούργια 
+							μεταβλητή με το όνομα <strong>JAVA_HOME</strong> η οποία θα έχει σαν Value το path στο οποίο
+							βρίσκεται η Java.</p>
+						
+						
+						   <img src="apache-maven-unit1/apache-maven-unit1-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>                 
+							  
+						
+						   <p>Τώρα θα πρέπει να δηλώσουμε στα Windows 10 την τοποθεσία που βρίσκεται
+							το εκτελέσιμο αρχείο της Java (java.exe).  Επιλέγουμε την System Variable 
+							<strong>Path</strong> και κάνουμε κλικ στο κουμπί <strong>Edit</strong>.</p>      
+										 
+						 <img src="apache-maven-unit1/apache-maven-unit1-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>       
+						 
+						 <p>Δηλώστε την μεταβλητή <strong>JAVA_HOME</strong> που έχετε ορίσει και τον <strong>bin</strong>
+							φάκελλο μέσα στον οποίο βρίσκεται το εκτελέσιμο αρχείο της Java. Πατήστε <strong>ΟΚ</strong> να 
+							ολοκληρώσετε την διαδικασία.</p>
+						
+						<img src="apache-maven-unit1/apache-maven-unit1-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>  
+						
+						<p>Αν ανοίξουμε ένα cmd terminal στα Windows 10 και γράψουμε <strong>java -version </strong>θα πρέπει
+							να λάβουμε το ακόλουθο αποτέλεσμα:</p>
+						
+						 <img src="apache-maven-unit1/apache-maven-unit1-5.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+					
+						 <p>Σαν δεύτερο βήμα τώρα, θα πρέπει να κατεβάσουμε και να αποσυμπιέσουμε το
+							Apache Maven. Από το web site της 
+							Apache <a href="https://maven.apache.org/download.cgi"><font color="#0000CC">(https://maven.apache.org/download.cgi)</font> </a>
+							κατεβάζουμε την τελευταία έκδοση του Maven η οποία είναι η 3.6.3.</p>
+					
+							<img src="apache-maven-unit1/apache-maven-unit1-6.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
      
-     <p>Σαν δεύτερο βήμα τώρα, θα πρέπει να κατεβάσουμε και να αποσυμπιέσουμε το
-         Apache Maven. Από το web site της 
-         Apache <a href="https://maven.apache.org/download.cgi"><font color="#0000CC">(https://maven.apache.org/download.cgi)</font> </a>
-         κατεβάζουμε την τελευταία έκδοση του Maven η οποία είναι η 3.6.3.</p>
-     
-     <img src="apache-maven-unit1/apache-maven-unit1-6.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
-     
-     <p>Αφού κατεβάσουμε το αρχείο, το κάνουμε unzip μέσα στο folder
-         ή directory που επιθυμούμε. Για να μπορέσουμε όμως να καλέσουμε το Maven 
-         σε ένα cmd terminal από οποιοδήποτε path και αν βρισκόμαστε, θα πρέπει να το
-         δηλώσουμε και αυτό (όπως κάναμε και με την Java) στα System Variables των Windows 10.
-         Δηλώνουμε λοιπόν μια καινούργια μεταβλητή με το όνομα <strong>M2_HOME</strong> η οποία θα έχει
-         σαν τιμή το path στο οποίο βρίσκεται το unzip αρχείο του Maven.</p>
-     
-      <img src="apache-maven-unit1/apache-maven-unit1-7.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
-      
-      <p>Τώρα θα πρέπει να δηλώσουμε στα Windows 10 που βρίσκεται το εκτελέσιμο αρχείο 
-          του Maven. Οπότε επιλέγουμε πάλι την μεταβλητή<strong> Path</strong>, πατάμε <strong>Edit</strong> και προσθέτουμε
-          την <strong>M2_HOME</strong> μεταβλητή μαζί με τον bin φάκελο του Maven.
-          Πατήστε<strong> ΟΚ</strong> όταν τελειώσετε την διαδικασία.</p>
-      
-      <img src="apache-maven-unit1/apache-maven-unit1-8.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
-      
-      <p>Αν λοιπόν ανοίξουμε ένα cmd terminal και εκτελέσουμε την εντολή <strong>mvn -v</strong> θα πρέπει
-          να πάρουμε πίσω το εξής αποτέλεσμα:</p>
+							<p>Αφού κατεβάσουμε το αρχείο, το κάνουμε unzip μέσα στο folder
+								ή directory που επιθυμούμε. Για να μπορέσουμε όμως να καλέσουμε το Maven 
+								σε ένα cmd terminal από οποιοδήποτε path και αν βρισκόμαστε, θα πρέπει να το
+								δηλώσουμε και αυτό (όπως κάναμε και με την Java) στα System Variables των Windows 10.
+								Δηλώνουμε λοιπόν μια καινούργια μεταβλητή με το όνομα <strong>M2_HOME</strong> η οποία θα έχει
+								σαν τιμή το path στο οποίο βρίσκεται το unzip αρχείο του Maven.</p>
+							
+							 <img src="apache-maven-unit1/apache-maven-unit1-7.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+						
+							 <p>Τώρα θα πρέπει να δηλώσουμε στα Windows 10 που βρίσκεται το εκτελέσιμο αρχείο 
+								του Maven. Οπότε επιλέγουμε πάλι την μεταβλητή<strong> Path</strong>, πατάμε <strong>Edit</strong> και προσθέτουμε
+								την <strong>M2_HOME</strong> μεταβλητή μαζί με τον bin φάκελο του Maven.
+								Πατήστε<strong> ΟΚ</strong> όταν τελειώσετε την διαδικασία.</p>
+							
+							<img src="apache-maven-unit1/apache-maven-unit1-8.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+						
+							<p>Αν λοιπόν ανοίξουμε ένα cmd terminal και εκτελέσουμε την εντολή <strong>mvn -v</strong> θα πρέπει
+								να πάρουμε πίσω το εξής αποτέλεσμα:</p>
+					  
+							 <img src="apache-maven-unit1/apache-maven-unit1-9.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+							
+							 <p>Μέχρι αυτό το σημείο έχουμε εγκαταστήσει όλα τα εργαλεία
+								που χρειάζονται για να δημιουργήσουμε java projects με το 
+								Apache Maven. Επειδή όμως όλα τα μοντέρνα εργαλεία έχουν την
+								ικανότητα ενσωμάτωσης του Apache Maven στο περιβάλλον τους, ας
+								προχωρήσουμε και σε αυτό το βήμα για να ολοκληρώσουμε την εργαλειοθήκη 
+								μας και να έχουμε ένα ολοκληρωμένο περιβάλλον ανάπτυξης εφαρμογών Java 
+								χρησιμοποιώντας Maven.</p>
 
-       <img src="apache-maven-unit1/apache-maven-unit1-9.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
-       
-       <p>Μέχρι αυτό το σημείο έχουμε εγκαταστήσει όλα τα εργαλεία
-           που χρειάζονται για να δημιουργήσουμε java projects με το 
-           Apache Maven. Επειδή όμως όλα τα μοντέρνα εργαλεία έχουν την
-           ικανότητα ενσωμάτωσης του Apache Maven στο περιβάλλον τους, ας
-           προχωρήσουμε και σε αυτό το βήμα για να ολοκληρώσουμε την εργαλειοθήκη 
-           μας και να έχουμε ένα ολοκληρωμένο περιβάλλον ανάπτυξης εφαρμογών Java 
-           χρησιμοποιώντας Maven.</p>
-       
-       <p>Στα δικά μας δωρεάν μαθήματα Apache Maven θα χρησιμοποιήσουμε 
-           το Community Edition (δωρεάν) του IntelliJ IDEA που μπορείτε 
-           να κατεβάσετε από εδώ:
-          <a href="https://www.jetbrains.com/idea/download/#section=windows"><font color="#0000CC">(https://www.jetbrains.com/idea/download/#section=windows)</font> </a>  . </p>
-       
-       <img src="apache-maven-unit1/apache-maven-unit1-10.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
-       
-       <p>Αφού το εγκαταστήσετε, ξεκινήστε το για να πάμε στις επιλογές του. 
-           Ίσως χρειαστεί να δημιουργήσετε ένα πρόχειρο Java project για 
-           να σας αφήσει να προχωρήσετε. Δημιουργείστε ένα java project δίνοντας 
-           ότι όνομα θέλετε. Όταν το περιβάλλον του IntelliJ είναι έτοιμο,
-           πηγαίνουμε<strong> File → Settings → Build, Execution, Deployment → Build Tools → Maven </strong>και
-           αλλάζουμε το Maven Home Directory σε αυτό που έχουμε ήδη εγκαταστήσει.
-           Δεν χρειάζεται να το ξαναγράψετε, θα είναι έτοιμη η επιλογή για να την επιλέξετε.</p>
-       
-        <img src="apache-maven-unit1/apache-maven-unit1-11.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
-        
-        <p>Πατήστε<strong> Apply</strong> και μετά <strong>ΟΚ</strong> για να ολοκληρώσετε την διαδικασία.</p>
-        
-        <p>Το περιβάλλον μας είναι έτοιμο τώρα. Από την επόμενη ενότητα 
-            θα αρχίζουμε να αναλύουμε όλες τις επιλογές που έχουμε
-            για την δημιουργία ενός java project και πως μπορούμε 
-            να προσθέτουμε third party libraries που δεν βρίσκονται
-            στην εγκατάσταση της java αλλά χρειάζονται για την σωστή
-            λειτουργία του κώδικα μας.</p>
-        <p><a href="https://kassapoglou.github.io/maven/learning-maven.html"><font color="#0000CC">Πίσω στις ενότητες Apache Maven</font> </a></p>
-        
-      
-                  
-                <div class="author-box">
-                    <div class="author-info flex flex-wrap">
-                        <div class="author-avatar">
-                            <img src="images/michail.jpg" alt="Michail Kassapoglou">
+								<p>Στα δικά μας δωρεάν μαθήματα Apache Maven θα χρησιμοποιήσουμε 
+									το Community Edition (δωρεάν) του IntelliJ IDEA που μπορείτε 
+									να κατεβάσετε από εδώ:
+								   <a href="https://www.jetbrains.com/idea/download/#section=windows"><font color="#0000CC">(https://www.jetbrains.com/idea/download/#section=windows)</font> </a>  . </p>
+								
+								<img src="apache-maven-unit1/apache-maven-unit1-10.jpg" alt=alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+								<p>Αφού το εγκαταστήσετε, ξεκινήστε το για να πάμε στις επιλογές του. 
+									Ίσως χρειαστεί να δημιουργήσετε ένα πρόχειρο Java project για 
+									να σας αφήσει να προχωρήσετε. Δημιουργείστε ένα java project δίνοντας 
+									ότι όνομα θέλετε. Όταν το περιβάλλον του IntelliJ είναι έτοιμο,
+									πηγαίνουμε<strong> File → Settings → Build, Execution, Deployment → Build Tools → Maven </strong>και
+									αλλάζουμε το Maven Home Directory σε αυτό που έχουμε ήδη εγκαταστήσει.
+									Δεν χρειάζεται να το ξαναγράψετε, θα είναι έτοιμη η επιλογή για να την επιλέξετε.</p>
+								
+								 <img src="apache-maven-unit1/apache-maven-unit1-11.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+								 
+								 <p>Πατήστε<strong> Apply</strong> και μετά <strong>ΟΚ</strong> για να ολοκληρώσετε την διαδικασία.</p>
+								 
+								 <p>Το περιβάλλον μας είναι έτοιμο τώρα. Από την επόμενη ενότητα 
+									 θα αρχίζουμε να αναλύουμε όλες τις επιλογές που έχουμε
+									 για την δημιουργία ενός java project και πως μπορούμε 
+									 να προσθέτουμε third party libraries που δεν βρίσκονται
+									 στην εγκατάσταση της java αλλά χρειάζονται για την σωστή
+									 λειτουργία του κώδικα μας.</p>
+								
+									 <h3>Γίνε Χορηγός στη Γνώση</h3>
+									 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	 <input type="hidden" name="cmd" value="_s-xclick" />
+	 <input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+	 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+	 <img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+	 </form></a></p>
+							
+						</section>
 
-                           
-                        </div><!-- .author-avatar -->
+						
+						<!-- sectionRow -->
+					
+						<!-- bookmarkFoot -->
+					
+						<h2>ΕΙΣΗΓΗΤΗΣ</h2>
+						<!-- instructorInfoBox -->
+						<div class="instructorInfoBox">
+							<div class="alignleft">
+								<a href="#"><img src="michail.jpg" alt="Merry Jhonson"></a>
+							</div>
+							<div class="description-wrap">
+								<h3 class="fw-normal"><a href="#"></a></h3>
+								<h4 class="fw-normal">Μιχάλης Κασάπογλου</h4>
+								<p>Ο Μιχάλης Κασάπογλου, είναι ένας από τους πιο έμπειρους τεχνικούς εκπαιδευτές στον χώρο του προγραμματισμού με πάνω από 20 χρόνια εμπειρία. Έχει εργαστεί σαν IT Operations Manager, Senior Programmer, και Training Team Leader ενώ κατέχει και αρκετές πιστοποιήσεις που καλύπτουν ένα μεγάλο φάσμα τεχνολογιών στο προγραμματισμό, σε βάσεις δεδομένων και cloud. Στον ελεύθερο του χρόνο διατηρεί ένα τεχνολογικό blog στο οποίο θα βρείτε αρκετά δωρεάν μαθήματα προγραμματισμού για αρχάριους.
+									</p>
+								<!--<a href="#" class="btn btn-default font-lato fw-semi text-uppercase">View Profile</a>-->
+							</div>
+						</div>
+					
+						<!-- reviewsList -->
+					
+						<!-- reviesSubmissionForm -->
+					
+					</article>
+					<!-- sidebar -->
+					<aside class="col-xs-12 col-md-3" id="sidebar">
+						<!-- widget course select -->
+						<section class="widget widget_box widget_course_select">
+							<header class="widgetHead text-center bg-theme">
+								<h3 class="text-uppercase">ΜΑΘΑΙΝΩ ΔΩΡΕΑΝ APACHE MAVEN</h3>
+							</header>
+							<strong class="price element-block font-lato" data-label="price:">FREE</strong>
+							<ul class="list-unstyled font-lato">
+								<!--<li><i class="far fa-user icn no-shrink"></i> 199 Students</li>-->
+								<!--<li><i class="far fa-clock icn no-shrink"></i> ΔΙΑΡΚΕΙΑ: 30 ΗΜΕΡΕΣ</li>-->
+								<!--<li><i class="fas fa-bullhorn icn no-shrink"></i> ΑΡΙΘΜΟΣ ΜΑΘΗΜΑΤΩΝ: 50</li>-->
+								<!--<li><i class="far fa-play-circle icn no-shrink"></i> Video: 12 hours</li>-->
+								<!--<li><i class="far fa-address-card icn no-shrink"></i> Certificate of Completion</li>-->
+							</ul>
+						</section>
 
-                        <div class="author-details">
-                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
-
-                            <div class="entry-content mt-3">
-                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
-                                  τρόπο να χρησιμοποιείτε το Apache Maven για την δημιουργία όλων των Java και Java EE project σας. Ασχολούμαι με την τεχνική εκπαίδευση 
-                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
-                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
-                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
-                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
-                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
-                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
-                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
-                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
-                            </div><!-- .entry-content -->
-                        </div><!-- .author-details -->
-                    </div><!-- .author-info -->
-                </div><!-- .author-box -->
-
-                
-            </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- .container -->
-
- 
-
-  
-
-    <script type='text/javascript' src='js/jquery.js'></script>
-    <script type='text/javascript' src='js/swiper.min.js'></script>
-    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
-    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
-    <script type='text/javascript' src='js/custom.js'></script>
-
-</body>
-</html>
+						<div class="one-third color-3 animate-box">
+							<span class="icon"><i class="icon-paypal"></i></span>
+							<div class="desc">
+								<h3>Γίνε Χορηγός στη Γνώση</h3>
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+</form></a></p>
+							</div>
+						</div>
+						<!-- widget categories -->
+						<section class="widget widget_categories">
+							<h3>ΚΑΤΗΓΟΡΙΕΣ ΜΑΘΗΜΑΤΩΝ</h3>
+							<ul class="list-unstyled text-capitalize font-lato">
+								<li class="cat-item cat-item-1"><a href="#">Programming</a></li>
+								<li class="cat-item active cat-item-2"><a href="#">DevOps</a></li>
+								<li class="cat-item cat-item-3"><a href="#">Web Design</a></li>
+								<li class="cat-item cat-item-4"><a href="#">Tools</a></li>
+								<li class="cat-item cat-item-5"><a href="#">Mobile</a></li>
+								<li class="cat-item cat-item-6"><a href="#">Databases</a></li>
+								<!--<li class="cat-item cat-item-7"><a href="#">IT &amp; Software</a></li>-->
+							</ul>
+						</section>
+						<!-- widget intro -->
+					<!--	<section class="widget widget_intro">
+							<h3>Course Intro</h3>
+							<div class="aligncenter overlay">
+								<a href="http://www.youtube.com/embed/9bZkp7q19f0?autoplay=1" class="btn-play far fa-play-circle lightbox fancybox.iframe"></a>
+								<img src="http://placehold.it/260x220" alt="image description">
+							</div>
+						</section>-->
+						<!-- widget popular posts -->
+						<section class="widget widget_popular_posts">
+							<h3>ΔΗΜΟΦΙΛΗ ΣΕΜΙΝΑΡΙΑ</h3>
+							<!-- widget cources list -->
+							<ul class="widget-cources-list list-unstyled">
+								<li>
+									<a href="#">
+										<div class="alignleft">
+											<img src="jakarta.png" alt="image description">
+										</div>
+										<div class="description-wrap">
+											<h4>Εισαγωγή στην Java EE (Jakarta Enterprise)</h4>
+											<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="alignleft">
+											<img src="javascript.png" alt="Δωρεάν μαθήματα JavaScript">
+										</div>
+										<div class="description-wrap">
+											<h4>Web προγραμματισμός με JavaScript</h4>
+											<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="alignleft">
+											<img src="java.svg" alt="Δωρεάν μαθήματα Java">
+										</div>
+										<div class="description-wrap">
+											<h4>Βασικές αρχές προγραμματισμού με Java</h4>
+											<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</section>
+						<div class="one-third color-3 animate-box">
+							<span class="icon"><i class="icon-paypal"></i></span>
+							<div class="desc">
+								<h3>Γίνε Χορηγός στη Γνώση</h3>
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+</form></a></p>
+							</div>
+						</div>
+						<!-- widget tags -->
+						<!--<nav class="widget widget_tags">
+							<h3>Tags</h3>-->
+							<!-- tag clouds -->
+							<!--<ul class="list-unstyled tag-clouds font-lato">
+								<li><a href="#">Future</a></li>
+								<li><a href="#">Science</a></li>
+								<li><a href="#">Coding</a></li>
+								<li><a href="#">Education</a></li>
+								<li><a href="#">Technology</a></li>
+							</ul>
+						</nav>-->
+					</aside>
+				</div>
+			</div>
+		</main>
+		<!-- footer area container -->
+				<!-- footer area container -->
+				<div class="footer-area bg-dark text-gray">
+					<!-- aside -->
+					<aside class="aside container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-3 col">
+								<div class="logo"><a href="home.html"><img src="images/logo.png" alt="studyLMS"></a></div>
+								<p>Ο πρωταρχικός λόγος που με ώθησε στο να δημιουργήσω αυτή την ιστοσελίδα και να προσφέρω δωρεάν μαθήματα είναι γιατί πιστεύω ότι η γνώση, σε οποιοδήποτε επίπεδο, πρέπει να μεταδίδεται για να έχει αξία.</p>
+								<a href="#" class="btn btn-default text-uppercase">ΞΕΚΙΝΗΣΤΕ ΤΑ ΜΑΘΗΜΑΤΑ</a>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-3 col hidden-xs">
+								<h3>ΔΗΜΟΦΙΛΗ ΜΑΘΗΜΑΤΑ</h3>
+								<!-- widget cources list -->
+								<ul class="widget-cources-list list-unstyled">
+									<li>
+										<a href="https://kassapoglou.github.io/python/python.html">
+											<div class="alignleft">
+												<img src="python.png" alt="Δωρεάν μαθήματα Python">
+											</div>
+											<div class="description-wrap">
+												<h4>Μαθαίνω Python Προγραμματισμό</h4>
+												<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="alignleft">
+												<img src="javascript.png" alt="Δωρεάν μαθήματα JavaScript">
+											</div>
+											<div class="description-wrap">
+												<h4>Μαθαίνω JavaScript προγραμματισμό</h4>
+												<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="alignleft">
+												<img src="java.svg" alt="Δωρεάν μαθήματα Java">
+											</div>
+											<div class="description-wrap">
+												<h4>Μαθαίνω Java Προγραμματισμό</h4>
+												<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<nav class="col-xs-12 col-sm-6 col-md-3 col">
+								<h3>ΣΥΝΔΕΣΜΟΙ</h3>
+								<!-- fooer navigation -->
+								<ul class="fooer-navigation list-unstyled">
+									<li><a href="https://kassapoglou.github.io/main/">ΑΡΧΙΚΗ</a></li>
+									<li><a href="https://kassapoglou.github.io/main/training-events.html">ΠΡΟΓΡΑΜΜΑ</a></li>
+									<li><a href="https://kassapoglou.github.io/main/course-list-all.html">ΜΑΘΗΜΑΤΑ</li>
+									<li><a href="#">ΧΟΡΗΓΟΙ</a></li>
+									<li><a href="#">ΤΕΧΝΟΛΟΓΙΑ</a></li>
+									<li><a href="https://kassapoglou.github.io/main/contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+									
+								</ul>
+							</nav>
+							<div class="col-xs-12 col-sm-6 col-md-3 col">
+								<h3>ΕΠΙΚΟΙΝΩΝΙΑ</h3>
+								<p>Μπορείτε να επικοινωνήσετε μαζί μου με τους εξής τρόπους:</p>
+								<!-- ft address -->
+								<address class="ft-address">
+									<dl>
+										<!--<dt><span class="fas fa-map-marker"><span class="sr-only">marker</span></span></dt>
+										<dd>Address: 9015 Sunset Boulevard United Kingdom</dd>-->
+										<dt><span class="fas fa-phone-square"><span class="sr-only">phone</span></span></dt>
+										<dd>Call: <a href="tel:+2156237532">+30 6976434707</a></dd>
+										<dt><span class="fas fa-envelope-square"><span class="sr-only">email</span></span></dt>
+										<dd>Email: <a href="mailto:michail.kassapoglou@gmail.com">michail.kassapoglou@gmail.com</a></dd>
+									</dl>
+								</address>
+							</div>
+						</div>
+					</aside>
+					<!-- page footer -->
+					<footer id="page-footer" class="font-lato">
+						<div class="container">
+							<div class="row holder">
+								<div class="col-xs-12 col-sm-push-6 col-sm-6">
+									<ul class="socail-networks list-unstyled">
+										<li><a href="#"><span class="fab fa-facebook"></span></a></li>
+										
+										<li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+									</ul>
+								</div>
+								<div class="col-xs-12 col-sm-pull-6 col-sm-6">
+									<!--<p><a href="#">Studylms</a> | &copy; 2018 <a href="#">DesignFalls</a>, All rights reserved</p>-->
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+				<!-- back top of the page -->
+				<span id="back-top" class="text-center fa fa-caret-up"></span>
+				<!-- loader of the page -->
+				<div id="loader" class="loader-holder">
+					<div class="block"><img src="images/svg/hearts.svg" width="100" alt="loader"></div>
+				</div>
+			</div>
+			<div class="popup-holder">
+				<div id="popup1" class="lightbox-demo">
+					<form action="#" class="user-log-form">
+						<h2>Login Form</h2>
+						<div class="form-group">
+							<input type="text" class="form-control element-block" placeholder="Username or email address *">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control element-block" placeholder="Password *">
+						</div>
+						<div class="btns-wrap">
+							<div class="wrap">
+								<label for="rem" class="custom-check-wrap fw-normal font-lato">
+									<input type="checkbox" id="rem" class="customFormReset">
+									<span class="fake-label element-block">Remember me</span>
+								</label>
+								<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
+							</div>
+							<div class="wrap text-right">
+								<p>
+									<a href="#" class="forget-link">Lost your Password?</a>
+								</p>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div id="popup2" class="lightbox-demo">
+					<form action="#" class="user-log-form">
+						<h2>Register Form</h2>
+						<div class="form-group">
+							<input type="email" class="form-control element-block" placeholder="Email address *">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control element-block" placeholder="Password *">
+						</div>
+						<div class="btns-wrap">
+							<div class="wrap">
+								<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Register</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- include jQuery -->
+			<script src="js/jquery.js"></script>
+			<!-- include jQuery -->
+			<script src="js/plugins.js"></script>
+			<!-- include jQuery -->
+			<script src="js/jquery.main.js"></script>
+			<!-- include jQuery -->
+			<script type="text/javascript" src="js/init.js"></script>
+		</body>
+		</html>
