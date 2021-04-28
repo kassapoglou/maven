@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Μαθαίνω Apache Maven</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων για το Apache Maven"> 
+    <meta name="robots" content="index, follow"> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="maven_style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150900548-1');
+</script>
+
+</head>
+<body class="single-blog-post">
+    <div class="page-header">
+           <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <i class="fa fa-envelope"></i><a href="#">michail.kassapoglou@gmail.com</a>
+                            </div><!-- .header-bar-email -->
+
+                            <div class="header-bar-text lg-flex align-items-center">
+                              <!--  <p><i class="fa fa-phone"></i>001-1234-88888 </p> -->
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                 <!--   <input type="search" placeholder="What would you like to learn?"> -->
+                                 <!--   <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button> -->
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                  <!--  <li><a href="#">Register</a></li> -->
+                                <!--    <li><a href="#">Login</a></li> -->
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                 </div>   <!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">
+                            <div class="site-branding">
+                                <h1 class="site-title"><a href="https://kassapoglou.github.io/main/" rel="home">Kassa<span>poglou</span></a></h1>
+                            </div><!-- .site-branding -->
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                                    <li><a href="https://kassapoglou.github.io/main">Home</a></li>
+                                    <li><a href="https://kassapoglou.github.io/main/contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                               
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+        <div class="page-header-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <header class="entry-header">
+                            <h1 class="entry-title">ΕΝΟΤΗΤΑ 2 Apache Maven - Maven Settings Explanation </h1>
+
+                            <div class="entry-meta flex justify-content-center align-items-center">
+                                <div class="post-author"><a href="#">Michail Kassapoglou </a></div>
+
+                              <!--  <div class="post-comments"><a href="#">02 Comments</a></div> -->
+                            </div><!-- .entry-meta -->
+                        </header><!-- .entry-header -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10">
+                <div class="featured-image">
+                  <!--  <img src="images/single-post.jpg" alt=""> -->
+
+                    <div class="posted-date position-absolute">
+                        <div class="day">31</div>
+                        <div class="month">Dec</div>
+                    </div><!-- .posted-date -->
+                </div><!-- .featured-image -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-1" style="height:0">
+                <div class="post-share">
+                   
+
+                  
+                </div><!-- .post-share -->
+            </div><!-- .col -->
+
+            <div class="col-12 col-lg-12">
+                <div class="single-post-wrap">
+                    
+<p><h3>ΔΩΡΕΑΝ ΜΑΘΗΜΑΤΑ APACHE MAVEN</h3></p>    
+<p>Στην σημερινή δωρεάν ενότητα Apache Maven, θα δούμε που ακριβώς 
+    αποθηκεύονται όλες οι ρυθμίσεις του, τι σημαίνουν και πότε 
+    μπορούμε να τις χρησιμοποιήσουμε, πως μπορούμε να λάβουμε βοήθεια
+    για τις εντολές του Apache Maven από το command prompt, και πως
+    μπορούμε να βελτιώσουμε την απόδοση του ίδιου του Apache Maven 
+    όταν χτίζουμε μεγάλα Java projects. Έχουμε πολλά θέματα να 
+    αναλύσουμε οπότε ας ξεκινήσουμε την θεωρία μας.</p>       
+
+<p>Όπως έχουμε ήδη δει στην ΕΝΟΤΗΤΑ 1 
+    <a href="https://kassapoglou.github.io/maven/learning-maven-unit1.html"><font color="#0000CC">(https://kassapoglou.github.io/maven/learning-maven-unit1.html)</font> </a>, 
+    για να ελέγξουμε την σωστή λειτουργία του Maven όπως και την έκδοση
+    της Java που χρησιμοποιεί εκτελούμε την εντολή <strong>mvn -version</strong>.</p>
+
+<img src="apache-maven-unit2/apache-maven-unit2-1.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+                    
+<p>Εάν θέλαμε να βρούμε όλες τις διαθέσιμες εντολές που μπορούμε 
+    να εκτελέσουμε από το command prompt δεν έχουμε παρά να εκτελέσουμε 
+    την εντολή <strong>mvn -h</strong> ή <strong>mvn -help</strong>. Η συγκεκριμένη εντολή, όταν εκτελεστεί,
+    θα μας παρουσιάσει μια λίστα με όλες τις επιλογές που μπορούμε να 
+    προσθέσουμε μετά το <strong>mvn</strong>. Αν πάτε προς το τέλος της λίστας, θα δείτε
+    μάλιστα ότι η εντολή <strong>mvn -version</strong> είναι μια από τις διαθέσιμες επιλογές.</p>
+
+
+<img src="apache-maven-unit2/apache-maven-unit2-2.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+
+<p>Τα βήματα εγκατάστασης του Apache Maven που έχουμε ακολουθήσει μέχρι αυτή 
+    την στιγμή, είναι αρκετά για να μπορέσουμε να χτίσουμε Maven projects
+    και να προχωρήσουμε στην θεωρία μας. Όμως σε επιχειρήσεις όπου τα projects
+    είναι αρκετά μεγάλα σε μέγεθος κώδικα αλλά και με μεγαλύτερες απαιτήσεις 
+    σε ασφάλεια,  ίσως υπάρχει ανάγκη παροχής επιπρόσθετων ρυθμίσεων. 
+    Που βρίσκονται όμως αυτές οι έξτρα ρυθμίσεις και πως ονομάζονται?</p>
+
+<p>Υπάρχουν δύο ειδών τοποθεσίες που μπορούμε να βρούμε τις ίδιες ρυθμίσεις: </p>
+<ul>
+    <li>
+        η πρώτη είναι στο αρχείο <strong>settings.xml</strong> το οποίο βρίσκεται
+        μέσα στο <strong>conf</strong> φάκελο της εγκατάστασης του Maven. 
+        Αυτές οι ρυθμίσεις εφαρμόζονται σε όλα τα maven projects για όλους τους χρήστες και για αυτό θεωρούνται global.
+        <img src="apache-maven-unit2/apache-maven-unit2-3.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+    </li>
+    <li>
+        Και η δεύτερη είναι πάλι σε ένα αρχείο με το όνομα <strong>settings.xml</strong>
+        αλλά μέσα στο φάκελο <strong>.m2</strong> του <strong>user directory</strong>. 
+        Αυτές οι ρυθμίσεις είναι προσωπικές για τον συγκεκριμένο χρήστη για αυτό και ονομάζονται user settings.
+        <img src="apache-maven-unit2/apache-maven-unit2-4.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+    </li>
+</ul>
+<p>Το Maven λοιπόν θα ψάξει και στις δύο αυτές τοποθεσίες 
+    για να βρει το αρχείο <strong>settings.xml</strong>. 
+    Αν υπάρχουν και τα δύο αρχεία και to καθένα περιέχει διαφορετική
+    ρύθμιση για κάποια επιλογή του προφίλ του Maven, 
+    θα υπερισχύσει το settings.xml αρχείο του χρήστη, δηλαδή εκείνο που βρίσκεται στο .m2 φάκελο.</p>
+
+<p>Θα έχετε ήδη παρατηρήσει ότι εκτός από το αρχείο
+    settings.xml μέσα στο φάκελο .m2 υπάρχουν και άλλοι φάκελοι
+    όπως π.χ ο repository που περιέχει όλες τις βιβλιοθήκες τις 
+    οποίες χρειάζονται τα project μας. Θα αναφερθούμε σε αυτό το 
+    φάκελο σε μελλοντική ενότητα οπότε θα δεν προχωρήσουμε να μιλήσουμε 
+    για τα Jar αρχεία που περιέχει. Αυτό όμως που μας ενδιαφέρει είναι να 
+    γνωρίζουμε την τοποθεσία του έτσι ώστε μπορούμε να βρούμε τις βιβλιοθήκες 
+    αλλά και το settings.xml αρχείο αν και εφόσον θέλουμε να το αλλάξουμε.
+    Για να βρούμε λοιπόν το που βρίσκεται το .m2/repository directory
+    δεν έχουμε παρά να τρέξουμε την εντολή:</p>
+<p><strong>mvn help:evaluate -Dexpression=settings.localRepository</strong></p>
+
+ <img src="apache-maven-unit2/apache-maven-unit2-5.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+ 
+ <p>Προσέξτε πριν από το help δεν υπάρχει παύλα (-). 
+     Θα μιλήσουμε αργότερα επίσης και το τι σημαίνει η άνω κάτω τελεία ( : ) 
+     και γιατί βάζουμε δύο εντολές μαζί. Για τώρα, συγκεντρωθείτε μόνο στο γεγονός
+     ότι ψάχνουμε να βρούμε το settings.xml αρχείο σε δύο τοποθεσίες.</p>
+ 
+ <p>Παρεμπιπτόντως, αν έχετε προσπαθήσει να βρείτε το .m2 φάκελο και δεν 
+     τον βρήκατε, είναι επειδή χρειάζεται να τρέξετε μια οποιαδήποτε 
+     maven εντολή πρώτα για να δημιουργηθεί.</p>
+
+     <p>Επίσης, το αρχείο settings.xml μέσα στον φάκελλο .m2 δεν δημιουργείται αυτόματα.
+         Δημιουργείστε ένα αρχείο μόνοι σας, ονομάστε το settings.xml και αντιγράψτε 
+         το template που σας παρέχω εδώ.  Καλό θα ήταν όταν διαχειρίζεστε τέτοιου είδους αρχεία να
+         χρησιμοποιείται έναν editor όπως notepad++.
+     </p>
+
+ 
+ <p><strong>settings.xml</strong></p>
+<pre class="prettyprint"><xmp>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<!--
+    User-specific configuration for maven. Includes things that should not
+    be distributed with the pom.xml file, such as developer identity, along with
+    local settings, like proxy information. The default location for the
+    settings file is ~/.m2/settings.xml
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <!--proxies>
+        <proxy>
+            <host>my.proxy.host</host>
+        </proxy>
+    </proxies-->
+
+    <!--pluginGroups>
+        <pluginGroup>org.codehaus.mojo</pluginGroup>
+    </pluginGroups-->
+	    <localRepository/>
+		<interactiveMode/>
+		<offline/>
+		<pluginGroups/>
+		<servers/>
+		<mirrors/>
+		<proxies/>
+		<profiles/>
+		<activeProfiles/>
+</settings>
+</xmp></pre>
+ 
+ <p>Στην ουσία έχουμε τις εξής παραμέτρους που μπορούμε να τροποποιήσουμε</p>
+ <ul>
+     <li>
+         <strong> localRepository </strong>: Αυτή είναι η τοποθεσία στην οποία δημιουργείται
+         ο <strong>repository</strong> φάκελος ο οποίος περιέχει όλες 
+         τις βιβλιοθήκες που χρειάζονται τα project μας. Με βάση το
+         παράδειγμα, θα μπορούσαμε να ορίσουμε μια καινούργια τοποθεσία.
+         Στο δικό μου settings.xml, ορίζω αυτό το αρχείο να είναι μια
+         τοποθεσία διαφορετική από το C:\ drive. Ο λόγος που το κάνω αυτός είναι
+         βασικά πρακτικός. Ο φάκελος αυτός μπορεί να μεγαλώσει κατά πολύ σε μέγεθος
+         όταν κατεβάζουμε καινούργιες βιβλιοθήκες κάθε φορά.
+          <img src="apache-maven-unit2/apache-maven-unit2-6.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+     </li>
+     <li>
+         <strong> InteractiveMode </strong>: Η προκαθορισμένη τιμή για αυτή την
+         μεταβλητή είναι true. Αυτό σημαίνει ότι όταν δημιουργούμε ένα καινούργιο
+         Maven Project μέσα από το command prompt το Maven θα μας ρωτήσει να 
+         ορίσουμε κάποια ονόματα όπως το όνομα του project, το όνομα του πακέτου
+         κτλ. Αν ορίσουμε την τιμή να είναι false τότε το Maven θα χρησιμοποιήσει
+         τις δικές του προκαθορισμένες τιμές χωρίς να μας ρωτήσει.
+     </li>
+     <li>
+         <strong> offline </strong>: Όταν χρησιμοποιούμε το Maven για πρώτη φορά
+         σε ένα project, θα προσπαθήσει να κατεβάσει από το δίκτυο όλες τις βιβλιοθήκες
+         που χρειάζεται το project για να γίνει compile και να εκτελεστεί σωστά. 
+         Αν τώρα θέσουμε αυτή την παράμετρο να είναι true, τότε από την επόμενη
+         φορά που θα κάνουμε build το project μας, το Maven δεν θα προσπαθήσει
+         να ενωθεί στο δίκτυο αλλά θα τρέξει σε offline mode. Αυτό σημαίνει ότι 
+         θα χρησιμοποιήσει τις βιβλιοθήκες που ήδη έχει κατεβάσει και έχει αποθηκεύσει 
+         στο repository φάκελο. Αυτό ίσως βολεύει μερικές φορές, αλλά αν υπάρχουν 
+         αναβαθμίσεις στις βιβλιοθήκες που χρησιμοποιούμε δεν θα ενημερωθούμε για 
+         αυτές. Για αυτό πρέπει να χρησιμοποιούμε το offline για συγκεκριμένους 
+         λόγους και για μικρό χρονικό διάστημα.
+     </li>
+     <li>
+         <strong>  servers </strong>:  Το Maven έχει την δυνατότητα να ενώνεται με
+         πολλούς και διαφορετικής χρήσης servers όπως π.χ Git και Jenkins.
+         Με την παράμετρο servers μπορούμε να ορίσουμε το username και το 
+         password που χρειάζεται το Maven για να ενωθεί με αυτούς τους servers.
+         Αυτό είναι μια πολύ συνηθισμένη πρακτική στον σημερινό κόσμο του
+         προγραμματισμού μιας και κυριαρχεί η έννοια του  CI/CD όπου
+         ορίζουμε ένα production pipeline. Για αυτά θα μιλήσουμε αργότερα
+         οπότε μην σας απασχολούν τώρα.
+     </li>
+     <li>
+         <strong> mirrors </strong>: Πολλές φορές, για να επισπεύσουμε την 
+         διαδικασία χτισίματος ενός project, αντί να κατεβάζουμε συνέχεια 
+         τις βιβλιοθήκες από το Ίντερνετ, τις αντιγράφουμε τοπικά στο εταιρικό μας
+         δίκτυο και ορίζουμε στο Maven, μέσα από την παράμετρο mirrors, που 
+         μπορεί να βρει το Maven αυτές τις βιβλιοθήκες στο τοπικό δίκτυο.
+     </li>
+     <li>
+         <strong> proxies </strong>: Αν και εφόσον υπάρχει proxy στην εταιρεία, 
+         τότε μέσα από την παράμετρο proxies ορίζουμε όλες τις πληροφορίες
+         που είναι απαραίτητες έτσι ώστε το Maven να μπορεί να ενωθεί στο Ίντερνετ.
+     </li>
+     
+ </ul>
+ 
+ <p>Πριν κλείσουμε την σημερινή ενότητα, θα ήθελα να αναφερθούμε 
+     σε ένα κοινό φαινόμενο που παρατηρείται όταν χτίζουμε ένα πολύ μεγάλο java
+     project που απαιτεί πάρα πολλές εξωτερικές βιβλιοθήκες επιπλέον σε αυτές που 
+     προσφέρει η Java – η έλλειψη μνήμης με αποτέλεσμα να μην μπορεί το Maven
+     να ολοκληρώσει την διαδικασία του.</p>
+ 
+ <p>Εξ ορισμού, μετά την εγκατάστασή του, το Maven θα χρησιμοποιήσει 
+     το πολύ <strong>512 ΜΒ</strong> μνήμης, με μικρότερο όριο τα 256 MB
+     <strong>(-Xms256m, -Xmx512m)</strong>. Η μνήμη αυτή που αφιερώνουμε
+     στο Maven είναι πρακτικά αποτελεσματική μόνο για μικρά 
+     projects. Σε μεγάλα έργα, το Maven, αν και θα χρησιμοποιήσει 
+     όλη την 512MB μνήμη δεν θα του είναι αρκετή για να ανταποκριθεί
+     στο action που εκτελεί οπότε θα σταματήσει να λειτουργεί και θα
+     εμφανίσει το <strong>java.lang.OutOfMemoryError</strong>.</p>
+ 
+ <p>Για να αποφύγουμε αυτές τις καταστάσεις, αρκεί να δώσουμε
+     λίγο περισσότερη μνήμη στο Maven συνήθως όχι λιγότερο από 1024ΜΒ. 
+     Υπάρχουν δύο τρόποι να το κάνουμε:</p>
+ 
+ <ul>
+     <li>Ο πρώτος τρόπος είναι να ανοίξουμε ένα command prompt
+         και να ορίσουμε μια καινούργια τιμή για το heap size
+         του Maven γράφοντας τη πιο κάτω εντολή
+         <p><strong>set MAVEN_OPTS=-Xmx1024m  -XX:MaxPermSize=128m</strong></p></li>
+     <li>
+         Αν όμως θέλετε μια πιο σταθερή λύση μπορούμε να
+         δημιουργήσουμε μια ακόμη μεταβλητή στα <strong>Environment Variables</strong>
+         των <strong>Windows 10</strong> και να δώσουμε το όνομα <strong>MAVEN_OPTS</strong> και την τιμή <strong>-Xmx1024m  -XX:MaxPermSize=128m</strong>
+         <img src="apache-maven-unit2/apache-maven-unit2-7.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+         <img src="apache-maven-unit2/apache-maven-unit2-8.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+     </li>
+ </ul>
+ 
+ <p>Από την επόμενη ενότητα θα αρχίσουμε να βλέπουμε πως να δημιουργήσουμε 
+     το πρώτο μας Maven project και ποιες είναι οι εντολές που έχουμε στην 
+     διάθεση μας για να το χτίσουμε και να το τρέξουμε.</p>
+
+     <p><a href="https://kassapoglou.github.io/maven/learning-maven.html"><font color="#0000CC">Πίσω στις ενότητες Apache Maven</font> </a></p>
+                  
+                <div class="author-box">
+                    <div class="author-info flex flex-wrap">
+                        <div class="author-avatar">
+                            <img src="images/michail.jpg" alt="Michail Kassapoglou">
+
+                           
+                        </div><!-- .author-avatar -->
+
+                        <div class="author-details">
+                            <h3 class="author-name">Michail Kassapoglou <span>Admin</span></h3>
+
+                            <div class="entry-content mt-3">
+                                <p>Γεια σας, είμαι ο Μιχάλης Κασάπογλου και θα σας διδάξω με τον ποιο απλό 
+                                  τρόπο να χρησιμοποιείτε το Apache Maven για την δημιουργία όλων των Java και Java EE project σας. Ασχολούμαι με την τεχνική εκπαίδευση 
+                                    σε διάφορες πλατφόρμες, λειτουργικά συστήματα και γλώσσες προγραμματισμού 
+                                    πάνω από 20 έτη. Κατέχω έναν αρκετά μεγάλο αριθμό πιστοποιήσεων Microsoft και Oracle 
+                                    και σαν Τraining Lead στην Intrasoft έχω την δυνατότητα να αναβαθμίζω συνεχώς 
+                                    τις γνώσεις μου και να έχω άμεση επαφή με αληθινά projects και εξειδικευμένες μεθόδους 
+                                    ανάπτυξης εφαρμογών που έχουν υψηλές απαιτήσεις.  
+                                    Για τυχόν ερωτήσεις σας μπορείτε να επικοινωνήσετε μαζί μου 
+                                    στο <font color="#0000CC">Michail.Kassapoglou@gmail.com </font></p>
+                             <p>   Σας ευχαριστώ που επισκεφτήκατε την ιστοσελίδα μου.</p>
+                            </div><!-- .entry-content -->
+                        </div><!-- .author-details -->
+                    </div><!-- .author-info -->
+                </div><!-- .author-box -->
+
+                
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+ 
+
+  
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
