@@ -30,6 +30,8 @@
 	<!-- include the site responsive stylesheet -->
 	<link rel="stylesheet" href="css/responsive.css">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+	<link href="https://cdn.rawgit.com/Killercodes/281792c423a4fe5544d9a8d36a4430f2/raw/36c2eb3e0c44133880485a143717bda9d180f2c1/GistDarkCode.css" rel="stylesheet" type="text/css">
+
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -194,8 +196,8 @@
 					<!-- breadcrumb -->
 					<ol class="breadcrumb">
 						<li><a href="home.html">ΑΡΧΙΚΗ</a></li>
-						<li><a href="contact.html">ΣΕΜΙΝΑΡΙΑ</a></li>
-						<li class="active">PYTHON</li>
+						<li><a href="https://kassapoglou.github.io/main/course-list-all.html">ΜΑΘΗΜΑΤΑ</a></li>
+						<li class="active">MAVEN</li>
 					</ol>
 				</div>
 			</nav>
@@ -205,7 +207,7 @@
 					<!-- content -->
 					<article id="content" class="col-xs-12 col-md-9">
 						<!-- content h1 -->
-						<h1 class="content-h1 fw-semi">Εισαγωγή στο Apache Maven</h1>
+						<h1 class="content-h1 fw-semi">ΕΝΟΤΗΤΑ 5 - Apache Maven Lifecycle (Part 1)</h1>
 						<!-- view header -->
 						<header class="view-header row">
 							<div class="col-xs-12 col-sm-9 d-flex">
@@ -250,185 +252,177 @@
 						<div class="aligncenter content-aligncenter">
 							<img src="images/maven.png" alt="image description">
 						</div>
-						<h3 class="content-h3">ΠΕΡΙΓΡΑΦΗ ΣΕΜΙΝΑΡΙΟΥ</h3>
-						<p>Στα δωρεάν μαθήματα Apache Maven, θα αναλύσουμε όσο πιο απλά
-							γίνεται τον μηχανισμό κατασκευής, διαχείρισης και 
-							αυτοματοποίησης εφαρμογών Java και Java EE με το εργαλείο
-							Apache Maven. Στις ενότητες που θα ακολουθήσουν θα έχουμε 
-							την ευκαιρία να εξηγήσουμε θεμελιώδεις έννοιες του Apache Maven
-							και ταυτόχρονα θα δούμε τα βήματα εγκατάστασης στον τοπικό σας υπολογιστή.</p>
+						<h3 class="content-h3">ΕΝΟΤΗΤΑ 5 - Apache Maven Lifecycle (Part 1)</h3>
 						
-						<p>Όμως δεν θα σταματήσουμε εκεί, αντιθέτως θα προχωρήσουμε
-							και σε προχωρημένες έννοιες όπως dependency management,
-							lifecycle phases, plug-ins και goals. Θα δούμε επίσης πως 
-							να ξεκινάμε ένα project από την αρχή χρησιμοποιώντας archetypes
-							και θα αναφερθούμε στο Maven release process και πως αυτό 
-							συνδυάζεται με το Jenkins.</p>
+<p>Στην σημερινή δωρεάν Apache Maven ενότητα θα εξηγήσουμε τι είναι 
+	το Apache Maven Lifecycle και πως αυτό συνδυάζεται με τα phases, 
+	τα plugins και τα goals τα οποία θα χρησιμοποιήσετε σε καθημερινή 
+	βάση σαν προγραμματιστής. Πριν όμως προχωρήσουμε σε περισσότερες λεπτομέρειες,
+		ας κάνουμε μια γρήγορη επανάληψη για το τι έχουμε αναλύσει μέχρι τώρα  
+		στις προηγούμενες ενότητες.</p>
+
+		<p>Βασικά, θα έχετε ήδη καταλάβει, ότι σκοπός του Maven, αν και υπάρχουν πάρα 
+		πολλά θετικά που μπορούμε να αναφέρουμε, είναι κυρίως να μας βοηθήσει 
+		να πραγματοποιήσουμε δύο βασικούς στόχους:</p>
+	<ul>
+		<li>Να μας βοηθήσει να χτίσουμε το project μας σωστά και με εύκολο τρόπο.</li>
+		<li>Να ενσωματώσει τις απαραίτητες βιβλιοθήκες που χρειάζεται το project για να τρέξει σωστά.</li>
+	</ul>
+
+	<p>Η περιγραφή των δύο βασικών στόχων του Maven γίνεται μέσω ενός XML αρχείου που 
+		ονομάζεται Project Object Model ή όπως ήδη γνωρίζουμε όλοι POM. 
+		Σαν τελικό βήμα, επιλέξαμε την εντολή <strong>install</strong> , από την Lifecycle 
+		λίστα του IntelliJ, για να χτίσουμε το project μας. Γιατί τρέξαμε 
+		την εντολή install? Υπάρχουν και άλλες εντολές που χρειάζεται να 
+		τρέξουμε? Ας δούμε λοιπόν τι είναι το <strong>Apache Maven Lifecycle</strong> και
+			πως αυτό συνδυάζεται με την εντολή install που εκτελέσαμε την προηγούμενη ενότητα.</p>
+	
+	<p>Το Apache Maven έχει καθορίσει ότι για την σωστή διαχείριση ενός
+			project θα χρησιμοποιήσει την κεντρική ιδέα του Lifecycle. Αυτό σημαίνει 
+			ότι όλη η διαδικασία κατασκευής και διανομής μιας εφαρμογής είναι απόλυτα 
+			καθορισμένη σε κάθε βήμα της. Για τον προγραμματιστή, αυτό σημαίνει ότι είναι
+			απαραίτητο να μάθει μόνο ένα μικρό σύνολο εντολών για να εξασφαλίσει το 
+			επιθυμητό αποτέλεσμα.</p>
+			
+			<p>Εφόσον λοιπόν το Apache Maven στηρίζεται στην λογική του Lifecycle, 
+			πόσα Lifecycles έχουμε? Υπάρχουν τρία Lifecycles που χρησιμοποιεί το Apache
+				Maven για να κατηγοριοποιήσει καλύτερα την λειτουργία τους :</p>
+		<ul>
+			<li><strong>clean</strong> – Αυτό διαχειρίζεται τον καθαρισμό αρχείων της εφαρμογής 
+				που υπάρχουν στον target φάκελο. Αυτήν την πράξη την εκτελούμε πριν 
+				κάνουμε build ξανά το project επειδή αλλάξαμε πχ τον κώδικα της εφαρμογής.</li>
+				<li><strong>default</strong> -  Αυτό χειρίζεται όλη την ανάπτυξη, δημιουργία και την εγκατάσταση της εφαρμογής.</li>
+				<li><strong>site</strong> – Αυτό χειρίζεται την δημιουργία documentation για 
+					τον κώδικα σας και κατά συνέπεια της εφαρμογής σας.</li>
+		</ul>
+
+		<p>Τα πιο πάνω Lifecycles είναι το θεωρητικό σκέλος του Apache Maven. 
+			Πρακτικά, κάθε Lifecycle είναι χωρισμένο σε phases και η εκτέλεση 
+			κάθε ενός phase γίνεται με την εκτέλεση των goals. Στο επίσημο site 
+			του Apache Maven μπορούμε να δούμε τα phases από τα οποία αποτελείται 
+			κάθε Lifecycle μαζί με μια σύντομη 
+			περιγραφή <a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html"><font color="#0000CC">(https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)</font> </a> . </p>
+		
+		<img src="apache-maven-unit4/apache-maven-unit4-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+		
+		<img src="apache-maven-unit4/apache-maven-unit4-2.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+		
+		<img src="apache-maven-unit4/apache-maven-unit4-3.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+
+		<p>Υπάρχουν λοιπόν goals, τα οποία ορίζονται από τα phases, τα οποία θα εκτελεστούν σε κάθε lifecycle. 
+			Αλλά από που προέρχονται αυτά τα goals? Αυτά διατίθενται μέσα από plugins τα οποία εξ ορισμού μας 
+			προσφέρει το Apache Maven χωρίς εμείς να εγκαταστήσουμε τίποτε περισσότερο. Οπότε αν θέλουμε να δώσουμε 
+			ένα πιο ολοκληρωμένο ορισμό για το Apache Maven Lifecycle θα λέγαμε το εξής:</p>
+		<p><strong>Το lifecycle του Apache Maven αποτελείται από ένα σύνολο καθορισμένων φάσεων που 
+			ονομάζονται phases. Κάθε phase ομαδοποιεί ένα σύνολο από goals που ορίζονται από 
+			τα plugins του Maven και η σειρά εκτέλεσή τους ορίζεται από το Lifecycle. Κάθε 
+			plugin είναι ένα γκρουπ από goals όπου κάθε goal είναι υπεύθυνο για την εκτέλεση
+			 μιας συγκεκριμένης ενέργειας.</strong></p>
+		
+			 <img src="apache-maven-unit4/apache-maven-unit4-4.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+
+			 <p>Ας δούμε όμως όλα όσα ήδη έχουμε αναφέρει στην πράξη για να τα κατανοήσουμε ακόμα καλύτερα.</p>
+			 <p>Ανοίγουμε το tab Maven στο IntelliJ και επεκτείνουμε το Plugins</p>
+			 
+			 <img src="apache-maven-unit4/apache-maven-unit4-5.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+			 
+			 <p>Εδώ βλέπουμε όλα τα plugins που είναι διαθέσιμα σε εμάς από την εγκατάσταση 
+				 και μόνο του Apache Maven. Όπως ήδη έχουμε αναφέρει, κάθε plugin είναι μια
+				  ομάδα από goals που μπορούμε να εκτελέσουμε. Ας πάρουμε για παράδειγμα το 
+				  <strong>plugin clean</strong>. Από το site του Apache Maven μπορούμε να διακρίνουμε ότι το 
+				  clean lifecycle ορίζει τρία phases: <strong>pre-clean</strong>, <strong>clean</strong> και <strong>post-clean</strong>. Όταν
+				   γράφουμε <strong> mvn clean</strong> τότε θα εκτελεστούν όλα τα phases μέσα στο clean Lifecycle
+					μέχρι και το clean phase. Εδώ το όνομα clean έτυχε να είναι ίδιο με το όνομα 
+					του Lifecycle. Δεν μπορούμε να εκτελέσουμε ένα Lifecycle με το όνομα του – 
+					εκτελούμε μόνο phases. Όταν λοιπόν γράψουμε το<strong> mvn clean</strong> το Maven θα βρει σε 
+					ποιο Lifecycle ανήκει και θα εκτελέσει όλα τα phases μέχρι και το clean 
+					(συμπεριλαμβάνει και το clean). Από που τρέχουμε τα goals? Μπορούμε να τα 
+					γράψουμε πατώντας επάνω στο V εικονίδιο (ονομάζεται Execute Maven Goal) και
+					 αφού τυπώσουμε την εντολή να πατήσουμε Enter για να εκτελεστεί.</p>
+					 
+
+					 <img src="apache-maven-unit4/apache-maven-unit4-6.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+					 <p>Το <strong>mvn clean</strong> θα καθαρίσει όλα τα target αρχεία που είχαν δημιουργηθεί με την
+						  εντολή install. Αυτή η ενέργεια είναι επιθυμητή συνήθως όταν αλλάζουμε τον κώδικα της εφαρμογής. 
+						  Προσέξτε όταν πριν εκτελέσουμε την εντολή clean υπάρχει το target directory 
+						  αλλά όχι μετά την εκτέλεσή της.</p>
+					 
+						  <img src="apache-maven-unit4/apache-maven-unit4-7.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						  <img src="apache-maven-unit4/apache-maven-unit4-71.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+
+						  <p>Για να βρούμε τώρα περισσότερες πληροφορίες γύρω από το Maven clean plugin
+							έχουμε δύο τρόπους – ο πρώτος είναι μέσα από εντολή και ο
+							 δεύτερος μέσα από το γραφικό περιβάλλον του IntelliJ. Πατάμε
+							  λοιπόν πάλι το κουμπί Execute Maven Goal και γράφουμε την εξής εντολή:</p>
+					  <p><strong>mvn help:describe -Dplugin=clean</strong></p>
+				  
+					  <img src="apache-maven-unit4/apache-maven-unit4-8.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p> 
+				  
+					  <img src="apache-maven-unit4/apache-maven-unit4-9.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+				  
+				  <p>Ενώ αν θέλουμε να δούμε πόσα ακόμα phases περιλαμβάνονται στο clean lifecycle γράφουμε την εξής εντολή:</p>
+				  <p><strong>mvn help:describe -Dcmd=clean</strong></p>
+				  
+				  <p>Εδώ χρησιμοποιούμε ένα plugin από το Apache Maven που
+					   ονομάζεται <strong>help</strong>. Με το colon ( : ) ορίζουμε το goal του plugin
+						που είναι describe. Τέλος περνάμε την παράμετρο clean στο goal 
+						describe με το<strong>-Dcmd</strong>.</p>
+				  
+						<img src="apache-maven-unit4/apache-maven-unit4-10.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+
+						<p>Εδώ διακρίνουμε ότι υπάρχουν τρεις phases που ορίζουν το lifecycle 
+							του clean όμως ένα μόνο είναι ενεργοποιημένο. Το αποτέλεσμα είναι
+							 ότι όποτε τρέχουμε το goal clean στην ουσία τρέχουμε ένα phase μόνο.
+							  Αυτό το phase περιέχει, όπως είδαμε με την εντολή<strong>mvn help:describe -Dplugin=clean</strong>,
+							   δύο goals – το <strong>clean</strong> και <strong>help</strong>. Κάθε goal από τα plugins μπορεί να εκτελεστεί μόνο 
+							   του ή να δηλωθεί σαν μέρος κάποιου phase στο Apache build Lifecycle. Αυτό θα γίνει
+								πιο ξεκάθαρο στην επόμενη ενότητα.</p>
 						
-						<p>Γιατί όμως είναι απαραίτητη η γνώση του Maven σε έναν προγραμματιστή?
-							Πριν από το Maven, οι προγραμματιστές έπρεπε να σπαταλήσουν άπειρες
-							ώρες για να χτίσουν ένα Java project με όλες τις απαραίτητες βιβλιοθήκες 
-							εγκαταστημένες. Για παράδειγμα, σκεφτείτε ένα project που χρησιμοποιεί
-							εκτός από Java και βιβλιοθήκες Spring όπως και Ηibernate. Με ποια σειρά,
-							και ποιες βιβλιοθήκες θα έπρεπε να φορτώσετε στο project σας για να 
-							λειτουργήσει σωστά? Το Maven είναι η λύση σε αυτό το πρόβλημα γιατί
-							προσφέρει έναν κοινό τρόπο για όλα τα projects να χτιστούν σωστά
-							και με όλες τις βιβλιοθήκες πάντα διαθέσιμες ασχέτως το πόσο συχνά 
-							αλλάζουν έκδοση.</p>
+						<p>Μέσα από το IntelliJ μπορούμε να δούμε τα goals που περιέχονται μέσα στο clean plugin 
+							πατώντας απλά το βελάκι δίπλα από το plugin.</p>
+							<img src="apache-maven-unit4/apache-maven-unit4-11.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
 						
-						<p>Φυσικά για να γίνουν όλα αυτά, θα χρειαστούμε κάποια
-							θεωρία και απλά παραδείγματα που δείχνουν όχι μόνο τον
-							τρόπο που ρυθμίζεται το Maven αλλά τις δυνατότητες που έχει.</p>
+						<p>Για να εκτελέσετε οποιοδήποτε goal, απλά κάνετε διπλό κλικ επάνω του και 
+							αυτόματα θα εκτελεστεί σαν να τρέχατε την αντίστοιχη εντολή. </p>
+						<p>Όπως βλέπετε, τα πάντα μέσα στο Maven είναι plugins που μας προσφέρουν 
+							ομαδοποιημένες εντολές προς εκτέλεση με την μορφή goals. Πολλά 
+							goals μαζί δημιουργούν ένα phase και πολλά phases μαζί δημιουργούν 
+							ένα Lifecycle. Αν προσέξετε, την πιο πάνω εικόνα θα παρατηρήσετε
+							 ότι για να εκτελεστεί το clean goal πρέπει να γράψουμε <strong>mvn clean:clean</strong>. 
+							 Το πρώτο clean είναι το όνομα του plugin ενώ το δεύτερο είναι το όνομα του goal.
+							  Με τον ίδιο τρόπο μπορούμε να τρέξουμε οποιοδήποτε goal από τα υπόλοιπα plugins
+							   που εμφανίζονται στην λίστα.</p>
+						
+						<p>Αν τώρα θέλουμε να συνδυάσουμε όλα όσα είπαμε για το Clean Lifecycle θα μπορούσαμε 
+							να λέγαμε τα εξής: Υπάρχει το Clean Lifecycle που αν και ορίζει τρία phases μόνο 
+							ένα phase είναι εξ ορισμού ενεργοποιημένο. Όταν λοιπόν καλούμε να εκτελεστεί το clean
+							 phase, τότε το Maven ψάχνει να βρει ποιο plugin
+							 περιέχει το goal clean και το εκτελεί. Γραφικά μπορούμε να το περιγράψουμε κάπως έτσι:</p>
+						
+							 <img src="apache-maven-unit4/apache-maven-unit4-12.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						
+						<p>Όταν λοιπόν γράφουμε <strong>mvn clean</strong>, που είναι η πιο συνηθισμένη εντολή,
+							 στην ουσία εκτελείται το clean goal. Το οποίο όμως είναι μέρος
+							 του clean Lifecycle οπότε θα εκτελεστούν και όλα τα phases που υπάρχουν
+							  πριν από αυτό με την σειρά μέχρι να εκτελεστεί το clean. Το Apache Maven έχει
+							   ορίσει το clean goal του clean plugin να εκτελείται κατά την διάρκεια του clean
+								phase στο clean Lifecycle.</p>
+						
+						<p>Στην επόμενη ενότητα θα μιλήσουμε για το Default Lifecycle όπως και για το 
+							Lifecycle που υπάρχει στο IntelliJ μέσα από το οποίο είχαμε 
+							εκτελέσει την εντολή install. </p>
 
-						<p>Αν θέλετε να γίνετε Java προγραμματιστής τότε σίγουρα θα πρέπει να γνωρίζετε τις βασικές έννοιες λειτουργίας του Apache Maven</p>
-						<!--<h3 class="content-h3">ΤΙ ΘΑ ΜΑΘΕΤΕ</h3>
-						<p>Στο πρώτο μέρος, των δωρεάν Python μαθημάτων, θα μάθετε όλες τις βασικές έννοιες που χρειάζεστε για να γράψετε τα πρώτα σας προγράμματα στην γλώσσα προγραμματισμού Python. Στην πραγματικότητα, η θεωρία που θα μάθετε, είναι σχεδόν η ίδια που θα μαθαίνατε σε οποιαδήποτε άλλη γλώσσα προγραμματισμού. </p>
-						<p>Θα αρχίσετε τα πρώτα σας βήματα στον προγραμματισμό με Python μαθαίνοντας τα διάφορα είδη data που υπάρχουν στην Python και πως μπορείτε να αποθηκεύσετε δεδομένα σε lists και dictionaries. Επίσης θα μάθετε πως να δημιουργήσετε ένα collection of data και πως μπορείτε να το χρησιμοποιήσετε με τον καλύτερο τρόπο στον κώδικα σας. Μετά θα προχωρήσουμε σε while loops και if statements έτσι ώστε να δώσουμε αυτόνομη λογική στα προγράμματα μας.</p>
-						<p>Θα συνεχίζετε να χτίζετε τις γνώσεις σας προχωρώντας  στην δημιουργία functions και να αλληλεπιδράτε με το πρόγραμμα σας όπως να ζητάτε από τον τελικό χρήστη να εισάγει δεδομένα κατά την εκτέλεση της εφαρμογής.</p>
-						<p>Κλάσεις και κληρονομικότητα θα σας απασχολήσουν για αρκετές ενότητες καλύπτοντας όλη την βασική θεωρία του αντικειμενοστραφή προγραμματισμού. Φυσικά κάθε κώδικας χρειάζεται να προστατευτεί από τυχόν λάθη στην εισαγωγή δεδομένων, όποτε θα μάθετε πως να διαχειρίζεστε τα ποιο κοινά λάθη που μπορεί να τύχουν καθώς η εφαρμογή σας εκτελείτε.</p>
-						<p>Στο δεύτερο μέρος των δωρεάν μαθημάτων θα μάθετε να γράφετε multi-threading και multi-processing κώδικα και να αναγνωρίζετε τις διάφορες τους. Επίσης θα εξοικειωθείτε με την έννοια του testing και ποιες βιβλιοθήκες να χρησιμοποιήσετε για να δοκιμάσετε τον κώδικα σας. Τέλος θα μάθετε κάποιες προχωρημένες έννοιες όπως Generators και Iterators, lambda expressions, και web scraping.</p>-->
-						<!--<ul class="listDefault list-unstyled">
-							<li>Thomas Edison may have been behind the invention.</li>
-							<li>Edison worked alongside partners, both financial and commercial, to get his best inventions off the ground,</li>
-							<li>Battling challenging cost targets and the need to build.</li>
-						</ul>
-						<p>Quasar the only home we've ever known extraordinary claims require extraordinary evidence billions billions Drake Eqa tion. Stirred by starlight! At the edge of forever. Rich in mystery Sea of Tranquility. Are creatures of the cosmos descend from astronomers. Trillion and billions upon billions upon billions upon billions upon billions. upon billions upon billions!</p>-->
-						<h2>ΕΝΟΤΗΤΕΣ</h2>
-						<!-- sectionRow -->
-						<section class="sectionRow">
-							<h2 class="h6 text-uppercase fw-semi rowHeading">ΒΑΣΙΚΕΣ ΕΝΝΟΙΕΣ ΛΕΙΤΟΥΡΓΙΑΣ ΤΟΥ APACHE MAVEN</h2>
-							<!-- sectionRowPanelGroup -->
-							<div class="panel-group sectionRowPanelGroup" id="accordion" role="tablist" aria-multiselectable="true">
-								<!-- panel -->
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="headingOne">
-										<h3 class="panel-title fw-normal">
-											<a  class="accOpener" role="button"  data-parent="#accordion"  aria-expanded="false" aria-controls="collapseOne" href="learning-maven-unit1.html" style="color:blue;">ΕΝΟΤΗΤΑ 1 - Setting Up Apache Maven</a>
-												<span class="accOpenerCol">
-												
-												<!--<i class="fas fa-chevron-circle-right accOpenerIcn"></i><i class="far fa-file inlineIcn"></i></i>Python Installation in Windows</i>-->
-												</span>
-												<!--<span class="accOpenerCol hd-phone">
-													<span class="tagText bg-primary fw-semi text-white text-uppercase">preview</span>
-													<time datetime="2011-01-12" class="timeCount">17 Min</time>
-												</span>-->
-											</a>
-										</h3>
-										
-									</div>
 
-									
-									<!-- collapseOne -->
+<!--#########################################################################################################################-->						
+					
 								
-								</div>
-								
-							<div class="panel panel-default">
-								<div class="panel-heading" role="tab" id="headingOne">
-									<h3 class="panel-title fw-normal">
-										<a  class="accOpener" role="button"  data-parent="#accordion"  aria-expanded="false" aria-controls="collapseOne" href="learning-maven-unit2.html" style="color:blue;">ΕΝΟΤΗΤΑ 2 - Maven Settings Explanation</a>
-											<span class="accOpenerCol">
-											
-											<!--<i class="fas fa-chevron-circle-right accOpenerIcn"></i><i class="far fa-file inlineIcn"></i></i>Python Installation in Windows</i>-->
-											</span> 
-											<!--<span class="accOpenerCol hd-phone">
-												<span class="tagText bg-primary fw-semi text-white text-uppercase">preview</span>
-												<time datetime="2011-01-12" class="timeCount">17 Min</time>
-											</span>-->
-										</a>
-									</h3>
-									</div>
-								</div> 
-
-								<div class="panel panel-default">
-									<div class="panel-heading" role="tab" id="headingOne">
-										<h3 class="panel-title fw-normal">
-											<a  class="accOpener" role="button"  data-parent="#accordion"  aria-expanded="false" aria-controls="collapseOne" href="learning-maven-unit3.html" style="color:blue;">ΕΝΟΤΗΤΑ 3 - Maven Project Creation</a>
-												<span class="accOpenerCol">
-												
-												<!--<i class="fas fa-chevron-circle-right accOpenerIcn"></i><i class="far fa-file inlineIcn"></i></i>Python Installation in Windows</i>-->
-												</span> 
-												<!--<span class="accOpenerCol hd-phone">
-													<span class="tagText bg-primary fw-semi text-white text-uppercase">preview</span>
-													<time datetime="2011-01-12" class="timeCount">17 Min</time>
-												</span>-->
-											</a>
-										</h3>
-										</div>
-									</div> 
-
-									<div class="panel panel-default">
-										<div class="panel-heading" role="tab" id="headingOne">
-											<h3 class="panel-title fw-normal">
-												<a  class="accOpener" role="button"  data-parent="#accordion"  aria-expanded="false" aria-controls="collapseOne" href="learning-maven-unit4.html" style="color:blue;">ΕΝΟΤΗΤΑ 4 - Maven Archetypes</a>
-													<span class="accOpenerCol">
-													
-													<!--<i class="fas fa-chevron-circle-right accOpenerIcn"></i><i class="far fa-file inlineIcn"></i></i>Python Installation in Windows</i>-->
-													</span> 
-													<!--<span class="accOpenerCol hd-phone">
-														<span class="tagText bg-primary fw-semi text-white text-uppercase">preview</span>
-														<time datetime="2011-01-12" class="timeCount">17 Min</time>
-													</span>-->
-												</a>
-											</h3>
-											</div>
-										</div> 
-
-										<div class="panel panel-default">
-											<div class="panel-heading" role="tab" id="headingOne">
-												<h3 class="panel-title fw-normal">
-													<a  class="accOpener" role="button"  data-parent="#accordion"  aria-expanded="false" aria-controls="collapseOne" href="learning-maven-unit5.html" style="color:blue;">ΕΝΟΤΗΤΑ 5 - Apache Maven Lifecycle (Part 1)</a>
-														<span class="accOpenerCol">
-														
-														<!--<i class="fas fa-chevron-circle-right accOpenerIcn"></i><i class="far fa-file inlineIcn"></i></i>Python Installation in Windows</i>-->
-														</span> 
-														<!--<span class="accOpenerCol hd-phone">
-															<span class="tagText bg-primary fw-semi text-white text-uppercase">preview</span>
-															<time datetime="2011-01-12" class="timeCount">17 Min</time>
-														</span>-->
-													</a>
-												</h3>
-												</div>
-											</div> 
-
-								
-												
-
-
-
-
-
-
-																					
-
-
-
-																									
-
-
-																											
-
-
-																												
-
-																													
-
-
-																																	
-
-																																	
-
-
-
-								<!-- panel -->
-								
-								<!-- panel -->
-							
-								<!-- panel -->
-								
-								<!-- panel -->
-							
-							</div>
-							
+									 <h3>Γίνε Χορηγός στη Γνώση</h3>
+									 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	 <input type="hidden" name="cmd" value="_s-xclick" />
+	 <input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+	 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+	 <img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+	 </form></a></p>
 							
 						</section>
 
@@ -436,18 +430,7 @@
 						<!-- sectionRow -->
 					
 						<!-- bookmarkFoot -->
-						<div class="bookmarkFoot">
-							<div class="bookmarkCol">
-								<ul class="socail-networks list-unstyled">
-									<li><a href="#" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
-									<li><a href="#" class="linkedin"><span class="fab fa-linkedin"></span></a></li>
-									
-								</ul>
-							</div>
-							<div class="bookmarkCol text-right">
-								<a href="#" class="btn btn-theme btn-warning text-uppercase fw-bold">Bookmark this course</a>
-							</div>
-						</div>
+					
 						<h2>ΕΙΣΗΓΗΤΗΣ</h2>
 						<!-- instructorInfoBox -->
 						<div class="instructorInfoBox">
