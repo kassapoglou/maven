@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- set the HandheldFriendly -->
+	<meta name="HandheldFriendly" content="True">
+	<!-- set the description -->
+	<meta name="description"
+	content="Μια ολοκληρωμένη σειρά δωρεάν μαθημάτων και on-line σεμιναρίων για το Apache Maven">
+	<!-- set the Keyword -->
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="maven, apache, apache maven, δωρεάν, seminaria maven, mathimata maven,
+               προγραμματισμός, δωρεάν μαθήματα maven, δωρεάν σεμινάρια maven, μαθήματα maven, σεμινάρια maven" />
+	<meta name="author" content="Michail Kassapoglou" />
+	<!-- set the page title -->
+	<title>Δωρεάν Μαθήματα Apache Maven</title>
+	<!-- include google roboto font cdn link -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<!-- include the site bootstrap stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/plugins.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/colors.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- include the site responsive stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150900548-1"></script>
+	<link href="https://cdn.rawgit.com/Killercodes/281792c423a4fe5544d9a8d36a4430f2/raw/36c2eb3e0c44133880485a143717bda9d180f2c1/GistDarkCode.css" rel="stylesheet" type="text/css">
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-150900548-1');
+	</script>
+</head>
+<body>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<!-- header of the page -->
+		<header id="page-header">
+			<!-- top bar -->
+			<div class="top-bar bg-dark text-gray">
+				<div class="container">
+					<div class="row top-bar-holder">
+						<div class="col-xs-9 col">
+							<!-- bar links -->
+							<ul class="font-lato list-unstyled bar-links">
+								<li>
+									<a href="tel:+30 6976434707">
+										<strong class="dt element-block text-capitalize hd-phone">Phone :</strong>
+										<strong class="dd element-block hd-phone">+(30) 6976434707 </strong>
+										<i class="fas fa-phone-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">phone</span></i>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:michail.kassapoglou@gmail.com">
+										<strong class="dt element-block text-capitalize hd-phone">Email :</strong>
+										<strong class="dd element-block hd-phone">michail.kassapoglou@gmail.com</strong>
+										<i class="fas fa-envelope-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">email</span></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xs-3 col justify-end">
+							<!-- user links -->
+							<!--<ul class="list-unstyled user-links fw-bold font-lato">-->
+							<!--	<li><a href="#popup1" class="lightbox">Login</a> <span class="sep">|</span> <a href="#popup2" class="lightbox">Register</a></li>-->
+							<!--</ul>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header holder -->
+			<div class="header-holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6 col-sm-3">
+							<!-- logo -->
+							<div class="logo">
+								<a href="index.html">
+									<img src="images/logo.png" alt="KASSAPOGLOU">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-9 static-block">
+							<!-- nav -->
+							<nav id="nav" class="navbar navbar-default">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								<!-- navbar collapse -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<!-- main navigation -->
+									<ul class="nav navbar-nav navbar-right main-navigation text-uppercase font-lato">
+										<li class="dropdown">
+											<a href="https://kassapoglou.github.io/main/">ΑΡΧΙΚΗ</a>
+											<!-- <ul class="dropdown-menu"> -->
+												<!--<li><a href="home.html">Home</a></li>-->
+											<!--	<li><a href="home2.html">Home 2</a></li>
+												<li><a href="home3.html">Home 3</a></li>-->
+											<!--</ul> -->
+										</li>
+										<li class="dropdown">
+											<a href="https://kassapoglou.github.io/main/training-events.html" >ΠΡΟΓΡΑΜΜΑ</a>
+											<!--<ul class="dropdown-menu"> -->
+												<!--<li><a href="courses-list.html">Course List</a></li>-->
+												<!--<li><a href="course-single.html">Course Single</a></li>-->
+										<!--	</ul> -->
+										</li>
+										<ul class="nav navbar-nav navbar-right main-navigation text-uppercase font-lato">
+											<li class="dropdown">
+												<a href="https://kassapoglou.github.io/main/course-list-all.html">ΜΑΘΗΜΑΤΑ</a>
+												<!-- <ul class="dropdown-menu"> -->
+													<!--<li><a href="home.html">Home</a></li>-->
+												<!--	<li><a href="home2.html">Home 2</a></li>
+													<li><a href="home3.html">Home 3</a></li>-->
+												<!--</ul> -->
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ΧΟΡΗΓΟΙ</a>
+												<!--<ul class="dropdown-menu"> -->
+													<!--<li><a href="courses-list.html">Course List</a></li>-->
+													<!--<li><a href="course-single.html">Course Single</a></li>-->
+											<!--	</ul> -->
+											</li>
+										<li class="dropdown">
+											<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ΠΡΟΓΡΑΜΜΑ</a>-->
+											<!--<ul class="dropdown-menu">-->
+												<!--<li><a href="events-list.html">Event List</a></li>-->
+												<!--<li><a href="event-sigle.html">Event Single</a></li>-->
+											<!--</ul>-->
+										</li> 
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ΤΕΧΝΟΛΟΓΙΑ</a>
+										<!--	<ul class="dropdown-menu">-->
+											<!--	<li><a href="404.html">404 Page</a></li>
+												<li><a href="about-us.html">About us</a></li>
+												<li><a href="forum.html">Forum Page</a></li>
+												<li><a href="forum-single.html">Forum Single</a></li>
+												<li><a href="instructors-list.html">Instructors List</a></li>
+												<li><a href="instructor-single.html">Instructors Single</a></li>
+												<li><a href="login-register.html">Login &amp; Register</a></li> -->
+										<!--	</ul>-->
+										</li>
+										<li class="dropdown">
+											<a href="https://kassapoglou.github.io/main/contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+										<!--	<ul class="dropdown-menu">
+												<li><a href="blog.html">Blog List</a></li>
+												<li><a href="blog-single.html">Blog Single</a></li>
+											</ul> -->
+										</li>
+									<!--	<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+											<ul class="dropdown-menu">
+												<li><a href="shop.html">Shop List</a></li>
+												<li><a href="single-product.html">Shop Single</a></li>
+												<li><a href="cartage.html">Cart Page</a></li>
+												<li><a href="checkout.html">Checkout</a></li>
+											</ul>
+										</li>-->
+										
+									</ul>
+								</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- contain main informative part of the site -->
+		<main id="main">
+			<!-- heading banner -->
+			<header class="heading-banner text-white bgCover" style="background-image: url(images/maven.jfif);">
+				<div class="container holder">
+					<div class="align">
+						<h1>Apache Maven</h1>
+					</div>
+				</div>
+			</header>
+			<!-- breadcrumb nav -->
+			<nav class="breadcrumb-nav">
+				<div class="container">
+					<!-- breadcrumb -->
+					<ol class="breadcrumb">
+						<li><a href="home.html">ΑΡΧΙΚΗ</a></li>
+						<li><a href="https://kassapoglou.github.io/main/course-list-all.html">ΜΑΘΗΜΑΤΑ</a></li>
+						<li class="active">MAVEN</li>
+					</ol>
+				</div>
+			</nav>
+			<!-- two columns -->
+			<div id="two-columns" class="container">
+				<div class="row">
+					<!-- content -->
+					<article id="content" class="col-xs-12 col-md-9">
+						<!-- content h1 -->
+						<h1 class="content-h1 fw-semi">ΕΝΟΤΗΤΑ 6 - Apache Maven Lifecycle (Part 2)</h1>
+						<!-- view header -->
+						<header class="view-header row">
+							<div class="col-xs-12 col-sm-9 d-flex">
+								<div class="d-col">
+									<!-- post author -->
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="#"><img src="michail.jpg" class="rounded-circle" alt="image description"></a>
+										</div>
+										<div class="description-wrap">
+											<h2 class="author-heading"><a href="#">Εισηγητής</a></h2>
+											<h3 class="author-heading-subtitle text-uppercase">ΜΙΧΑΛΗΣ ΚΑΣΑΠΟΓΛΟΥ</h3>
+										</div>
+									</div>
+								</div>
+								<div class="d-col">
+									<!-- post author -->
+									<div class="post-author">
+										<div class="alignleft no-shrink icn-wrap">
+											<i class="far fa-bookmark"></i>
+										</div>
+										<div class="description-wrap">
+											<h2 class="author-heading"><a href="#">Κατηγορία</a></h2>
+											<h3 class="author-heading-subtitle text-uppercase">TOOLS</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--<div class="col-xs-12 col-sm-3">
+								<div class="rating-holder">
+									<ul class="star-rating list-unstyled justify-end">
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+									</ul>
+									<strong class="element-block text-right subtitle fw-normal">(2 Reviews)</strong>
+								</div>
+							</div>-->
+						</header>
+						<div class="aligncenter content-aligncenter">
+							<img src="images/maven.png" alt="image description">
+						</div>
+						<h3 class="content-h3">ΕΝΟΤΗΤΑ 6 - Apache Maven Lifecycle (Part 2)</h3>
+
+						
+						<p>Στην προηγούμενη ενότητα είδαμε το clean Lifecycle και όλα τα phases 
+							όπως και τα goals από τα οποία αποτελείται το συγκεκριμένο phase. 
+							Σε αυτή την δωρεάν ενότητα Apache Maven, θα δούμε το <strong>default 
+							Lifecycle </strong> όπως επίσης και πως μπορούμε να κάνουμε build ένα
+							Java Maven project είτε επειδή το έχουμε δημιουργήσει για πρώτη φορά, είτε γιατί
+							αλλάξαμε κάποιες γραμμές κώδικα και πρέπει να το δημιουργήσουμε ξανά.</p>
+						
+						<p>Με το clean lifecycle αυτό που θέλαμε να πετύχουμε είναι να καθαρίσουμε 
+							το project μας από προηγούμενα builds έτσι ώστε να το χτίσουμε πάλι 
+							από την αρχή, ίσως γιατί προσθέσαμε ή γενικότερα αλλάξαμε κάποια σημεία
+							 του κώδικα. Αυτό το επιβεβαιώσαμε όταν εκτελώντας το clean είδαμε ότι
+							  εξαφανίστηκε o target φάκελλος και όλα τα στοιχεία που είχαν δημιουργηθεί 
+							  όταν είχαμε τρέξει για πρώτη φορά την εντολή install.</p>
+						
+						<p>Αφού λοιπόν καθαρίσουμε τα παλαιότερα αρχεία, θέλουμε τώρα για να 
+							δημιουργήσουμε το project από την αρχή αφού περιέχει τα καινούργια 
+							στοιχεία που έχουμε προσθέσει στον κώδικα. Για αυτό το σκοπό, θα πρέπει
+							 να χρησιμοποιήσουμε το <strong>default Lifecycle</strong> και πιο συγκεκριμένα θα πρέπει 
+							 να καλέσουμε το <strong>install phase</strong>. Πριν προχωρήσουμε, ας δούμε πάλι τα 23
+							  phases από τα οποία αποτελείται το default Lifecycle.</p>
+						
+							  <img src="apache-maven-unit5/apache-maven-unit5-1.jpg" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						<p>Παρατηρώντας την λίστα, θα δούμε ότι το <strong>phase install</strong>, το 
+							οποίο και δημιουργεί το τελικό jar αρχείο του project, βρίσκεται στην προτελευταία θέση. 
+							Αυτό σημαίνει ότι όταν τρέχουμε την εντολή <strong>mvn install</strong>, 
+							αυτό θα βρει το phase install,  θα ψάξει να βρει ποιο plugin είναι συνδεδεμένο 
+							με αυτό το phase και από το plugin θα τρέξει το goal install. Μπορούμε 
+							να δούμε το goal install από την λίστα των plugins στο IntelliJ. </p>
+						
+							<img src="apache-maven-unit5/apache-maven-unit5-2.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						
+						<p>Η σειρά των phases όπως εμφανίζονται στην λίστα του default Lifecycle είναι
+							 σημαντική, γιατί όποτε τρέχουμε μια εντολή θα τρέξουν όλες οι εντολές από την
+							  αρχή της λίστας μέχρι και την εντολή την οποία εκτελέσαμε. Οπότε, όταν
+							   τρέξαμε την<strong> mvn install </strong>εντολή, εκτελέστηκαν όλες τα πιο πάνω 
+							   phases (και κατά συνέπεια goals) με την σειρά μέχρι και την install για να 
+							   δημιουργηθεί το project μας.</p>
+						
+						<p>Αν και δεν έχουμε τελειώσει ακόμα με το default Lifecycle, αφού
+							 είναι και το πιο σημαντικό από όλα τα υπόλοιπα Lifecycle, ας ολοκληρώσουμε
+							  την κουβέντα μας με μια αναφορά και στο <strong>site Lifecycle</strong> και μετά θα ξαναγυρίσουμε
+							   στο default για να μιλήσουμε για την δημιουργία του project με
+								περισσότερες λεπτομέρειες.</p>
+						
+						<p>Το site Lifecycle ορίζεται μόνο από τέσσερα phases:</p>
+						
+						<img src="apache-maven-unit5/apache-maven-unit5-3.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						
+						<p> Γενικότερα, το site Lifecycle δεν έχει καμία αξία χωρίς την ύπαρξη του Maven 
+							site plugin. Το site plugin χρησιμοποιείται για να δημιουργήσει ένα HTML αρχείο 
+							που περιέχει στοιχεία του project και κάποια reports σε σχέση με την δημιουργία
+							 του project.</p>
+						
+						<p>Το site plugin ορίζει οκτώ goals αλλά δύο μόνο είναι άμεσα συνδεδεμένα με τα
+							 phases του site Lifecycle. Αυτό μπορούμε να το επιβεβαιώσουμε τρέχοντας την εντολή </p>
+						
+						<p><strong>mvn help:describe -Dcmd=site</strong></p>
+						
+						<img src="apache-maven-unit5/apache-maven-unit5-4.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						<img src="apache-maven-unit5/apache-maven-unit5-5.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						
+						<p>Όπως παρατηρούμε από το αποτέλεσμα εκτέλεσης της εντολής, το site goal του 
+							site plugin συνδέεται με το site phase, ενώ το deploy goal του site
+							 plugin συνδέεται με το site-deploy phase.</p>
+						
+						<p>Αυτό που έχουμε δει μέχρι τώρα, είναι μια λίστα από plugins τα 
+							οποία προσφέρονται από το Maven. Τα plugins αυτά περιέχουν goals 
+							τα οποία έχουν συνδεθεί με κάποια phases. Οπότε η επόμενη ερώτηση 
+							είναι ποιος είναι ο ρόλος του Lifecycle στο IntelliJ?</p>
+						
+							<img src="apache-maven-unit5/apache-maven-unit5-6.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						
+						<p>Για να απαντήσουμε αυτή την ερώτηση, θα πρέπει πρώτα να μιλήσουμε για το τι είδος
+							project προσπαθούμε να δημιουργήσουμε. Γενικότερα στην Java μπορούμε να 
+							δημιουργήσουμε δύο ειδών αρχεία – τα <strong>jars</strong> και τα <strong>wars</strong>. Τα jars είναι για 
+							standard edition java εφαρμογές και για microservices που περιέχουν ενσωματωμένους
+							 application servers (πχ. Spring Boot) και τα war αρχεία που είναι η καθαρή
+							  μορφή μιας Java Web εφαρμογής. Στο δικό μας project δεν έχουμε ορίσει το 
+							  τι είδος project package θέλουμε να δημιουργήσουμε οπότε το Maven, και
+							   κατά συνέπεια το IntelliJ, θεωρεί ότι θέλουμε να δημιουργήσουμε ένα project
+								σε jar μορφή. Το Lifecycle που εμφανίζεται είναι το προτεινόμενο από το 
+								Maven για την δημιουργία ενός jar project. Αυτό που κάνει είναι να συνδυάζει
+								 phases από όλα τα Maven Lifecycles και να δημιουργεί ένα καινούργιο ειδικά
+								  για την δημιουργία jar projects. Κάθε phase σχετίζεται και με ένα plug in
+								   και φυσικά με τα αντίστοιχα goals τα οποία το plugin περιέχει. Σχεδόν
+									όλα τα phases προέρχονται από το default Lifecycle. Επειδή όμως εξετάσαμε 
+									το clean και το site Lifecycle ας δούμε και το default.</p>
+						
+						<p>Τρέχουμε λοιπόν την εντολή</p>
+						<p><strong>mvn help:describe -Dcmd=deploy</strong></p>
+						
+						<img src="apache-maven-unit5/apache-maven-unit5-7.JPG" alt="Δωρεάν Μαθήματα και Σεμινάρια Apache Maven" class="center"><p></p>
+						
+						<p>Όπως παρατηρούμε, χωρίς εμείς να το έχουμε ορίσει, το είδος του αρχείου 
+							που θα δημιουργηθεί θα είναι jar. Είναι όμως συνετό, να ορίζουμε κάποιες
+							 παραμέτρους στο POM ασχέτως αν είναι προκαθορισμένα από το σύστημα ή όχι.
+							  Έτσι θα έχουμε καλύτερο έλεγχο του project. Ας προσθέσουμε λοιπόν επίσημα 
+							  την επιλογή αυτή στο POM γράφοντας</p>
+					
+							  <script src="https://gist.github.com/kassapoglou/23507dc3a92c822b12bc57d791ff4887.js"></script>
+					
+						
+						<p>Το POM τώρα θα πρέπει να έχει την εξής μορφή:</p>
+						
+						<p><strong>pom.xml</strong></p>
+						<script src="https://gist.github.com/kassapoglou/c6d10cd8bb3c6def1c5d6def26d567f4.js"></script>
+						
+						<p>Η περιγραφή του κάθε ενός phase που είναι συσχετισμένο με κάποιο
+							 plugin μπορεί να βρεθεί στο site του Apache Maven ή μπορείτε να διαβάσετε
+							  μια γρήγορη περιγραφή στον πίνακα που έχουμε δείξει πιο πάνω. Απλά θέλω 
+							  να τονίσω το γεγονός ότι το deploy phase δεν σημαίνει ότι κάνω deploy μια 
+							  εφαρμογή σε έναν application server αλλά ότι κάνω deploy το δημιουργημένο
+							   jar αρχείο σε ένα remote repository εκτός του υπολογιστή μας.</p>
+						
+						<p>Τώρα, νομίζω, θα έχετε καταλάβει γιατί τρέξαμε την εντολή install όταν είχαμε
+							 δημιουργήσει το project. Βασικά, εκτελέσαμε το phase install, το οποίο πριν 
+							 εκτελεστεί θα τρέξουν όλα τα προηγούμενα phases τα οποία περιέχουν συγκεκριμένα
+							  goals. Τώρα η ερώτηση είναι, εσείς θα πρέπει να κάνετε κλικ επάνω στην 
+							  επιλογή install του Lifecycle πλαισίου, ή να γράψετε την εντολή (ή εντολές)
+							   στο Execute Maven Goal? Το εύκολο θα είναι να επιλέξετε την επιλογή που σας
+								δίνεται στο Lifecycle, όπως έχουμε τρέξει ήδη. Αν θέλετε όμως να περάσετε 
+								κάποια έξτρα παράμετρο στην εντολή τότε θα χρειαστεί να γράψετε την εντολή.
+								 Η γνώμη μου είναι να εκτελείτε όλες τις εντολές μέσα από το Execute Maven
+								  Goal το οποίο, επειδή γνωρίζει ήδη το LifeCycle και τα plugins, θα σας
+								   βοηθήσει καθώς γράφετε τις εντολές σας. </p>
+						
+						<p>Ποια είναι η πιο συνηθισμένη εντολή που θα τρέχετε σαν προγραμματιστές? Η απάντηση είναι:</p>
+						<p><strong>mvn clean install</strong></p>
+						
+						<p>Αυτή η εντολή (βασικά είναι δύο εντολές), κάθε φορά που την εκτελείτε,
+							 θα καθαρίζει το προηγούμενο jar, τρέχοντας όλα τα phases από το
+							  clean Lifecycle και μετά θα τρέξει όλα τα phases από το default 
+							  Lifecycle μέχρι και την install phase δημιουργώντας το τελικό jar του project.</p>
+						
+						<p>Αν θέλουμε να ανακεφαλαιώσουμε, από την πρακτική πλευρά, τι έχουμε μάθει
+							 για το Maven μέχρι τώρα, θα λέγαμε ότι γνωρίζουμε το πως να δημιουργήσουμε
+							  ένα Java Maven Project μέσα από το IntelliJ, πως να προσθέσουμε το properties
+							   για να τρέξει το build process σωστά με την Java 11, πως να καθαρίζουμε και
+								πως να δημιουργούμε καινούργιο jar και τέλος πως να εκτελούμε το project
+								 μέσα από το IntelliJ. Τέλεια, μέχρι αυτό το σημείο, αν το project σας 
+								 δεν χρειάζεται καμία εξωτερική βιβλιοθήκη, όπως πχ Hibernate, τότε μπορείτε
+								  να δημιουργήσετε προγράμματα Java, να γράψετε κώδικα και να τα εκτελέσετε.</p>
+						
+						<p>Στην επόμενη ενότητα θα κλείσουμε την αναφορά μας στο Apache Maven Lifecycle.</p>
+<!--#########################################################################################################################-->						
+					
+								
+									 <h3>Γίνε Χορηγός στη Γνώση</h3>
+									 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	 <input type="hidden" name="cmd" value="_s-xclick" />
+	 <input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+	 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+	 <img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+	 </form></a></p>
+							
+						</section>
+
+						
+						<!-- sectionRow -->
+					
+						<!-- bookmarkFoot -->
+					
+						<h2>ΕΙΣΗΓΗΤΗΣ</h2>
+						<!-- instructorInfoBox -->
+						<div class="instructorInfoBox">
+							<div class="alignleft">
+								<a href="#"><img src="michail.jpg" alt="Merry Jhonson"></a>
+							</div>
+							<div class="description-wrap">
+								<h3 class="fw-normal"><a href="#"></a></h3>
+								<h4 class="fw-normal">Μιχάλης Κασάπογλου</h4>
+								<p>Ο Μιχάλης Κασάπογλου, είναι ένας από τους πιο έμπειρους τεχνικούς εκπαιδευτές στον χώρο του προγραμματισμού με πάνω από 20 χρόνια εμπειρία. Έχει εργαστεί σαν IT Operations Manager, Senior Programmer, και Training Team Leader ενώ κατέχει και αρκετές πιστοποιήσεις που καλύπτουν ένα μεγάλο φάσμα τεχνολογιών στο προγραμματισμό, σε βάσεις δεδομένων και cloud. Στον ελεύθερο του χρόνο διατηρεί ένα τεχνολογικό blog στο οποίο θα βρείτε αρκετά δωρεάν μαθήματα προγραμματισμού για αρχάριους.
+									</p>
+								<!--<a href="#" class="btn btn-default font-lato fw-semi text-uppercase">View Profile</a>-->
+							</div>
+						</div>
+					
+						<!-- reviewsList -->
+					
+						<!-- reviesSubmissionForm -->
+					
+					</article>
+					<!-- sidebar -->
+					<aside class="col-xs-12 col-md-3" id="sidebar">
+						<!-- widget course select -->
+						<section class="widget widget_box widget_course_select">
+							<header class="widgetHead text-center bg-theme">
+								<h3 class="text-uppercase">ΜΑΘΑΙΝΩ ΔΩΡΕΑΝ APACHE MAVEN</h3>
+							</header>
+							<strong class="price element-block font-lato" data-label="price:">FREE</strong>
+							<ul class="list-unstyled font-lato">
+								<!--<li><i class="far fa-user icn no-shrink"></i> 199 Students</li>-->
+								<!--<li><i class="far fa-clock icn no-shrink"></i> ΔΙΑΡΚΕΙΑ: 30 ΗΜΕΡΕΣ</li>-->
+								<!--<li><i class="fas fa-bullhorn icn no-shrink"></i> ΑΡΙΘΜΟΣ ΜΑΘΗΜΑΤΩΝ: 50</li>-->
+								<!--<li><i class="far fa-play-circle icn no-shrink"></i> Video: 12 hours</li>-->
+								<!--<li><i class="far fa-address-card icn no-shrink"></i> Certificate of Completion</li>-->
+							</ul>
+						</section>
+
+						<div class="one-third color-3 animate-box">
+							<span class="icon"><i class="icon-paypal"></i></span>
+							<div class="desc">
+								<h3>Γίνε Χορηγός στη Γνώση</h3>
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+</form></a></p>
+							</div>
+						</div>
+						<!-- widget categories -->
+						<section class="widget widget_categories">
+							<h3>ΚΑΤΗΓΟΡΙΕΣ ΜΑΘΗΜΑΤΩΝ</h3>
+							<ul class="list-unstyled text-capitalize font-lato">
+								<li class="cat-item cat-item-1"><a href="#">Programming</a></li>
+								<li class="cat-item active cat-item-2"><a href="#">DevOps</a></li>
+								<li class="cat-item cat-item-3"><a href="#">Web Design</a></li>
+								<li class="cat-item cat-item-4"><a href="#">Tools</a></li>
+								<li class="cat-item cat-item-5"><a href="#">Mobile</a></li>
+								<li class="cat-item cat-item-6"><a href="#">Databases</a></li>
+								<!--<li class="cat-item cat-item-7"><a href="#">IT &amp; Software</a></li>-->
+							</ul>
+						</section>
+						<!-- widget intro -->
+					<!--	<section class="widget widget_intro">
+							<h3>Course Intro</h3>
+							<div class="aligncenter overlay">
+								<a href="http://www.youtube.com/embed/9bZkp7q19f0?autoplay=1" class="btn-play far fa-play-circle lightbox fancybox.iframe"></a>
+								<img src="http://placehold.it/260x220" alt="image description">
+							</div>
+						</section>-->
+						<!-- widget popular posts -->
+						<section class="widget widget_popular_posts">
+							<h3>ΔΗΜΟΦΙΛΗ ΣΕΜΙΝΑΡΙΑ</h3>
+							<!-- widget cources list -->
+							<ul class="widget-cources-list list-unstyled">
+								<li>
+									<a href="#">
+										<div class="alignleft">
+											<img src="jakarta.png" alt="image description">
+										</div>
+										<div class="description-wrap">
+											<h4>Εισαγωγή στην Java EE (Jakarta Enterprise)</h4>
+											<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="alignleft">
+											<img src="javascript.png" alt="Δωρεάν μαθήματα JavaScript">
+										</div>
+										<div class="description-wrap">
+											<h4>Web προγραμματισμός με JavaScript</h4>
+											<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="alignleft">
+											<img src="java.svg" alt="Δωρεάν μαθήματα Java">
+										</div>
+										<div class="description-wrap">
+											<h4>Βασικές αρχές προγραμματισμού με Java</h4>
+											<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</section>
+						<div class="one-third color-3 animate-box">
+							<span class="icon"><i class="icon-paypal"></i></span>
+							<div class="desc">
+								<h3>Γίνε Χορηγός στη Γνώση</h3>
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="GQD77W6K672RA" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
+</form></a></p>
+							</div>
+						</div>
+						<!-- widget tags -->
+						<!--<nav class="widget widget_tags">
+							<h3>Tags</h3>-->
+							<!-- tag clouds -->
+							<!--<ul class="list-unstyled tag-clouds font-lato">
+								<li><a href="#">Future</a></li>
+								<li><a href="#">Science</a></li>
+								<li><a href="#">Coding</a></li>
+								<li><a href="#">Education</a></li>
+								<li><a href="#">Technology</a></li>
+							</ul>
+						</nav>-->
+					</aside>
+				</div>
+			</div>
+		</main>
+		<!-- footer area container -->
+				<!-- footer area container -->
+				<div class="footer-area bg-dark text-gray">
+					<!-- aside -->
+					<aside class="aside container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-3 col">
+								<div class="logo"><a href="home.html"><img src="images/logo.png" alt="studyLMS"></a></div>
+								<p>Ο πρωταρχικός λόγος που με ώθησε στο να δημιουργήσω αυτή την ιστοσελίδα και να προσφέρω δωρεάν μαθήματα είναι γιατί πιστεύω ότι η γνώση, σε οποιοδήποτε επίπεδο, πρέπει να μεταδίδεται για να έχει αξία.</p>
+								<a href="#" class="btn btn-default text-uppercase">ΞΕΚΙΝΗΣΤΕ ΤΑ ΜΑΘΗΜΑΤΑ</a>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-3 col hidden-xs">
+								<h3>ΔΗΜΟΦΙΛΗ ΜΑΘΗΜΑΤΑ</h3>
+								<!-- widget cources list -->
+								<ul class="widget-cources-list list-unstyled">
+									<li>
+										<a href="https://kassapoglou.github.io/python/python.html">
+											<div class="alignleft">
+												<img src="python.png" alt="Δωρεάν μαθήματα Python">
+											</div>
+											<div class="description-wrap">
+												<h4>Μαθαίνω Python Προγραμματισμό</h4>
+												<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="alignleft">
+												<img src="javascript.png" alt="Δωρεάν μαθήματα JavaScript">
+											</div>
+											<div class="description-wrap">
+												<h4>Μαθαίνω JavaScript προγραμματισμό</h4>
+												<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="alignleft">
+												<img src="java.svg" alt="Δωρεάν μαθήματα Java">
+											</div>
+											<div class="description-wrap">
+												<h4>Μαθαίνω Java Προγραμματισμό</h4>
+												<strong class="price text-primary element-block font-lato text-uppercase">ΔΩΡΕΑΝ</strong>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<nav class="col-xs-12 col-sm-6 col-md-3 col">
+								<h3>ΣΥΝΔΕΣΜΟΙ</h3>
+								<!-- fooer navigation -->
+								<ul class="fooer-navigation list-unstyled">
+									<li><a href="https://kassapoglou.github.io/main/">ΑΡΧΙΚΗ</a></li>
+									<li><a href="https://kassapoglou.github.io/main/training-events.html">ΠΡΟΓΡΑΜΜΑ</a></li>
+									<li><a href="https://kassapoglou.github.io/main/course-list-all.html">ΜΑΘΗΜΑΤΑ</li>
+									<li><a href="#">ΧΟΡΗΓΟΙ</a></li>
+									<li><a href="#">ΤΕΧΝΟΛΟΓΙΑ</a></li>
+									<li><a href="https://kassapoglou.github.io/main/contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+									
+								</ul>
+							</nav>
+							<div class="col-xs-12 col-sm-6 col-md-3 col">
+								<h3>ΕΠΙΚΟΙΝΩΝΙΑ</h3>
+								<p>Μπορείτε να επικοινωνήσετε μαζί μου με τους εξής τρόπους:</p>
+								<!-- ft address -->
+								<address class="ft-address">
+									<dl>
+										<!--<dt><span class="fas fa-map-marker"><span class="sr-only">marker</span></span></dt>
+										<dd>Address: 9015 Sunset Boulevard United Kingdom</dd>-->
+										<dt><span class="fas fa-phone-square"><span class="sr-only">phone</span></span></dt>
+										<dd>Call: <a href="tel:+2156237532">+30 6976434707</a></dd>
+										<dt><span class="fas fa-envelope-square"><span class="sr-only">email</span></span></dt>
+										<dd>Email: <a href="mailto:michail.kassapoglou@gmail.com">michail.kassapoglou@gmail.com</a></dd>
+									</dl>
+								</address>
+							</div>
+						</div>
+					</aside>
+					<!-- page footer -->
+					<footer id="page-footer" class="font-lato">
+						<div class="container">
+							<div class="row holder">
+								<div class="col-xs-12 col-sm-push-6 col-sm-6">
+									<ul class="socail-networks list-unstyled">
+										<li><a href="#"><span class="fab fa-facebook"></span></a></li>
+										
+										<li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+									</ul>
+								</div>
+								<div class="col-xs-12 col-sm-pull-6 col-sm-6">
+									<!--<p><a href="#">Studylms</a> | &copy; 2018 <a href="#">DesignFalls</a>, All rights reserved</p>-->
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+				<!-- back top of the page -->
+				<span id="back-top" class="text-center fa fa-caret-up"></span>
+				<!-- loader of the page -->
+				<div id="loader" class="loader-holder">
+					<div class="block"><img src="images/svg/hearts.svg" width="100" alt="loader"></div>
+				</div>
+			</div>
+			<div class="popup-holder">
+				<div id="popup1" class="lightbox-demo">
+					<form action="#" class="user-log-form">
+						<h2>Login Form</h2>
+						<div class="form-group">
+							<input type="text" class="form-control element-block" placeholder="Username or email address *">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control element-block" placeholder="Password *">
+						</div>
+						<div class="btns-wrap">
+							<div class="wrap">
+								<label for="rem" class="custom-check-wrap fw-normal font-lato">
+									<input type="checkbox" id="rem" class="customFormReset">
+									<span class="fake-label element-block">Remember me</span>
+								</label>
+								<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
+							</div>
+							<div class="wrap text-right">
+								<p>
+									<a href="#" class="forget-link">Lost your Password?</a>
+								</p>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div id="popup2" class="lightbox-demo">
+					<form action="#" class="user-log-form">
+						<h2>Register Form</h2>
+						<div class="form-group">
+							<input type="email" class="form-control element-block" placeholder="Email address *">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control element-block" placeholder="Password *">
+						</div>
+						<div class="btns-wrap">
+							<div class="wrap">
+								<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Register</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- include jQuery -->
+			<script src="js/jquery.js"></script>
+			<!-- include jQuery -->
+			<script src="js/plugins.js"></script>
+			<!-- include jQuery -->
+			<script src="js/jquery.main.js"></script>
+			<!-- include jQuery -->
+			<script type="text/javascript" src="js/init.js"></script>
+		</body>
+		</html>
